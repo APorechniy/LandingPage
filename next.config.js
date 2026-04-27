@@ -7,9 +7,18 @@ const nextConfig = {
     compiler: {
         removeConsole: process.env.NODE_ENV === 'production',
     },
-
-    reactStrictMode: true,
+    outputFileTracingIncludes: {
+        '*': [
+            './node_modules/sharp/**/*'
+        ],
+        '/api/**/*': [
+            './node_modules/sharp/**/*'
+        ]
+    },
     poweredByHeader: false,
+    reactStrictMode: true,
+    compress: true,
+    reactStrictMode: true,
 }
 
 module.exports = nextConfig

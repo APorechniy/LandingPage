@@ -1,66 +1,229 @@
 {
     "globalCssTokens": {
         "base": {
-            "--transition-smooth": "0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            "--transition-slow": "0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-            "--border-radius-sm": "0.5rem",
-            "--border-radius-md": "1rem",
-            "--border-radius-lg": "2rem",
-            "--border-radius-xl": "4rem",
+            "--transition-fast": "0.15s ease",
+            "--transition-smooth": "0.3s ease",
+            "--border-radius-sm": "0.25rem",
+            "--border-radius-md": "0.5rem",
+            "--border-radius-lg": "1rem",
+            "--border-radius-xl": "2rem",
             "--font-main": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
-            "--font-display": "'Cinzel', 'Times New Roman', serif",
-            "--font-decor": "'Playfair Display', serif",
-            "--container-width": "1280px",
-            "--container-mobile-width": "768px"
+            "--font-display": "'Space Grotesk', 'Inter', sans-serif",
+            "--font-mono": "'JetBrains Mono', monospace",
+            "--container-width": "1280px"
         },
         "light": {
-            "--primary": "#0a1c3a",
-            "--primary-light": "#1a3a6e",
-            "--accent": "#c9a13b",
-            "--accent-glow": "#e8c56d",
-            "--accent-secondary": "#2a9d8f",
-            "--background": "#f9f7f2",
-            "--background-alt": "#f0ece1",
+            "--primary": "#0a1628",
+            "--primary-light": "#1a2a4a",
+            "--accent": "#00c853",
+            "--accent-glow": "#69f0ae",
+            "--accent-soft": "#e8f5e9",
+            "--background": "#ffffff",
+            "--background-alt": "#f5f7fa",
             "--surface": "#ffffff",
-            "--surface-elevated": "#fcfaf5",
-            "--text-main": "#1a1a1a",
-            "--text-muted": "#4a4a4a",
-            "--text-dim": "#7a7a7a",
-            "--border-light": "#e0d8cc",
-            "--border-gold": "#c9a13b",
-            "--shadow-sm": "0 4px 12px rgba(10, 28, 58, 0.04)",
-            "--shadow-md": "0 12px 28px rgba(10, 28, 58, 0.08)",
-            "--shadow-lg": "0 24px 48px rgba(10, 28, 58, 0.12)",
-            "--shadow-gold": "0 16px 40px rgba(201, 161, 59, 0.15)",
-            "--gradient-hero": "linear-gradient(135deg, #0a1c3a 0%, #1a3a6e 50%, #0a1c3a 100%)",
-            "--gradient-card": "linear-gradient(145deg, #ffffff 0%, #fcfaf5 100%)",
-            "--pattern-islamic": "repeating-linear-gradient(45deg, rgba(201, 161, 59, 0.05) 0px, rgba(201, 161, 59, 0.05) 2px, transparent 2px, transparent 8px)"
+            "--surface-elevated": "#fafbfc",
+            "--text-main": "#0a1628",
+            "--text-muted": "#475569",
+            "--text-light": "#94a3b8",
+            "--border-light": "#e2e8f0",
+            "--border-accent": "#00c853",
+            "--shadow-sm": "0 2px 8px rgba(10, 22, 40, 0.04)",
+            "--shadow-md": "0 8px 24px rgba(10, 22, 40, 0.08)",
+            "--shadow-lg": "0 16px 48px rgba(10, 22, 40, 0.12)",
+            "--gradient-hero": "linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #00c853 0%, #69f0ae 100%)"
         },
         "dark": {
-            "--primary": "#050d1a",
-            "--primary-light": "#0a1c3a",
-            "--accent": "#d4af37",
-            "--accent-glow": "#f3d779",
-            "--accent-secondary": "#2a9d8f",
-            "--background": "#0d1117",
-            "--background-alt": "#131a24",
-            "--surface": "#182230",
-            "--surface-elevated": "#1e2a3a",
-            "--text-main": "#f0f0f0",
-            "--text-muted": "#b0b0b0",
-            "--text-dim": "#707070",
-            "--border-light": "#2a3a4a",
-            "--border-gold": "#d4af37",
-            "--shadow-sm": "0 4px 12px rgba(0, 0, 0, 0.3)",
-            "--shadow-md": "0 12px 28px rgba(0, 0, 0, 0.4)",
-            "--shadow-lg": "0 24px 48px rgba(0, 0, 0, 0.5)",
-            "--shadow-gold": "0 16px 40px rgba(212, 175, 55, 0.2)",
-            "--gradient-hero": "linear-gradient(135deg, #050d1a 0%, #0a1c3a 50%, #050d1a 100%)",
-            "--gradient-card": "linear-gradient(145deg, #182230 0%, #1e2a3a 100%)",
-            "--pattern-islamic": "repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.08) 0px, rgba(212, 175, 55, 0.08) 2px, transparent 2px, transparent 8px)"
+            "--primary": "#f0f4f8",
+            "--primary-light": "#cbd5e1",
+            "--accent": "#00e676",
+            "--accent-glow": "#69f0ae",
+            "--accent-soft": "#1b2e1b",
+            "--background": "#0a0f14",
+            "--background-alt": "#0f1620",
+            "--surface": "#131c26",
+            "--surface-elevated": "#18232e",
+            "--text-main": "#f0f4f8",
+            "--text-muted": "#94a3b8",
+            "--text-light": "#64748b",
+            "--border-light": "#1e2a38",
+            "--border-accent": "#00e676",
+            "--shadow-sm": "0 2px 8px rgba(0, 0, 0, 0.3)",
+            "--shadow-md": "0 8px 24px rgba(0, 0, 0, 0.4)",
+            "--shadow-lg": "0 16px 48px rgba(0, 0, 0, 0.5)",
+            "--gradient-hero": "linear-gradient(135deg, #0f1620 0%, #131c26 100%)",
+            "--gradient-accent": "linear-gradient(135deg, #00e676 0%, #69f0ae 100%)"
         }
     },
     "sections": {
+        "Header": {
+            "styles": {
+                "HeaderWrapper": {
+                    "__html": "header",
+                    "base": {
+                        "position": "fixed",
+                        "top": "0",
+                        "left": "0",
+                        "right": "0",
+                        "z-index": "100",
+                        "background": "var(--surface)",
+                        "border-bottom": "1px solid var(--border-light)",
+                        "font-family": "var(--font-main)",
+                        "box-shadow": "var(--shadow-sm)"
+                    },
+                    "mobile": {
+                        "background": "var(--surface)"
+                    }
+                },
+                "HeaderContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto",
+                        "padding": "1rem 2rem",
+                        "display": "flex",
+                        "align-items": "center",
+                        "justify-content": "space-between"
+                    },
+                    "mobile": {
+                        "padding": "0.75rem 1rem"
+                    }
+                },
+                "LogoContainer": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "LogoIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "1.75rem",
+                        "line-height": "1",
+                        "font-weight": "700",
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {
+                        "font-size": "1.5rem"
+                    }
+                },
+                "LogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "letter-spacing": "-0.02em"
+                    },
+                    "mobile": {
+                        "font-size": "1.25rem"
+                    }
+                },
+                "NavContainer": {
+                    "__html": "nav",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "2.5rem"
+                    },
+                    "mobile": {
+                        "display": "none"
+                    }
+                },
+                "NavItemOne": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-weight": "500",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "NavItemTwo": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-weight": "500",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "NavItemThree": {
+                    "__html": "a",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-weight": "500",
+                        "font-size": "0.95rem",
+                        "cursor": "pointer",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "HeaderCta": {
+                    "__html": "button",
+                    "base": {
+                        "background": "var(--primary)",
+                        "color": "var(--text-light)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.65rem 1.5rem",
+                        "font-weight": "600",
+                        "font-size": "0.9rem",
+                        "cursor": "pointer",
+                        "transition": "background var(--transition-fast)"
+                    },
+                    "mobile": {
+                        "padding": "0.5rem 1rem",
+                        "font-size": "0.8rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "HeaderWrapper": {
+                    "HeaderContainer": {
+                        "LogoContainer": {
+                            "LogoIcon": {
+                                "content": "⚡"
+                            },
+                            "LogoText": {
+                                "content": "LandX"
+                            }
+                        },
+                        "NavContainer": {
+                            "NavItemOne": {
+                                "content": "Услуги",
+                                "props": {
+                                    "href": "#services"
+                                }
+                            },
+                            "NavItemTwo": {
+                                "content": "Кейсы",
+                                "props": {
+                                    "href": "#portfolio"
+                                }
+                            },
+                            "NavItemThree": {
+                                "content": "Процесс",
+                                "props": {
+                                    "href": "#steps"
+                                }
+                            }
+                        },
+                        "HeaderCta": {
+                            "content": "Обсудить проект"
+                        }
+                    }
+                }
+            }
+        },
         "Hero": {
             "styles": {
                 "HeroSection": {
@@ -70,15 +233,14 @@
                         "min-height": "100vh",
                         "display": "flex",
                         "align-items": "center",
-                        "padding": "8rem 2rem 4rem",
+                        "padding": "6rem 2rem 4rem",
                         "background": "var(--gradient-hero)",
-                        "position": "relative",
-                        "overflow": "hidden",
-                        "font-family": "var(--font-main)"
+                        "font-family": "var(--font-main)",
+                        "border-bottom": "1px solid var(--border-light)"
                     },
                     "mobile": {
-                        "flex-direction": "column",
-                        "padding": "4rem 1rem 2rem"
+                        "min-height": "auto",
+                        "padding": "5rem 1rem 3rem"
                     }
                 },
                 "HeroContainer": {
@@ -86,12 +248,21 @@
                     "base": {
                         "max-width": "var(--container-width)",
                         "margin": "0 auto",
-                        "width": "100%",
-                        "position": "relative",
-                        "z-index": "2"
+                        "width": "100%"
+                    },
+                    "mobile": {}
+                },
+                "HeroGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "1.2fr 0.8fr",
+                        "gap": "4rem",
+                        "align-items": "center"
                     },
                     "mobile": {
-                        "max-width": "var(--container-mobile-width)"
+                        "grid-template-columns": "1fr",
+                        "gap": "2.5rem"
                     }
                 },
                 "HeroContent": {
@@ -99,64 +270,1399 @@
                     "base": {
                         "display": "flex",
                         "flex-direction": "column",
-                        "align-items": "center",
+                        "gap": "1.5rem"
+                    },
+                    "mobile": {
                         "text-align": "center"
+                    }
+                },
+                "HeroBadge": {
+                    "__html": "div",
+                    "base": {
+                        "display": "inline-block",
+                        "background": "var(--accent-soft)",
+                        "color": "var(--accent)",
+                        "padding": "0.3rem 1rem",
+                        "border-radius": "var(--border-radius-full)",
+                        "font-weight": "600",
+                        "font-size": "0.85rem",
+                        "width": "fit-content",
+                        "text-transform": "uppercase",
+                        "letter-spacing": "0.5px"
+                    },
+                    "mobile": {
+                        "margin": "0 auto"
                     }
                 },
                 "HeroTitle": {
                     "__html": "h1",
                     "base": {
                         "font-family": "var(--font-display)",
-                        "font-size": "clamp(3.5rem, 8vw, 6rem)",
+                        "font-size": "clamp(2.75rem, 5vw, 4rem)",
                         "font-weight": "700",
-                        "line-height": "1.1",
+                        "line-height": "1.15",
                         "color": "var(--text-main)",
-                        "margin": "0 0 1.5rem",
-                        "text-transform": "uppercase",
-                        "letter-spacing": "4px",
-                        "max-width": "1100px",
-                        "animation": "${fadeIn} 2s"
+                        "margin": "0"
                     },
-                    "mobile": {}
+                    "mobile": {
+                        "font-size": "clamp(2rem, 8vw, 3rem)"
+                    }
                 },
-                "HeroTitleGold": {
+                "HeroTitleAccent": {
                     "__html": "span",
                     "base": {
                         "color": "var(--accent)",
-                        "text-shadow": "0 0 20px rgba(201, 161, 59, 0.5)"
-                    }
+                        "border-bottom": "3px solid var(--accent)",
+                        "padding-bottom": "0.25rem"
+                    },
+                    "mobile": {}
                 },
-                "HeroImage": {
-                    "__html": "img",
+                "HeroDescription": {
+                    "__html": "p",
                     "base": {
-                        "width": "300px",
-                        "height": "300px"
+                        "font-size": "1.2rem",
+                        "line-height": "1.6",
+                        "color": "var(--text-muted)",
+                        "margin": "0",
+                        "max-width": "90%"
+                    },
+                    "mobile": {
+                        "font-size": "1rem",
+                        "max-width": "100%"
                     }
                 },
-                "__keyframes": {
-                    "fadeIn": {
-                        "from": {
-                            "opacity": 0
-                        },
-                        "to": {
-                            "opacity": 1
-                        }
+                "HeroList": {
+                    "__html": "ul",
+                    "base": {
+                        "list-style": "none",
+                        "padding": "0",
+                        "margin": "1rem 0 0",
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "0.75rem"
+                    },
+                    "mobile": {
+                        "align-items": "center"
                     }
+                },
+                "HeroListItemOne": {
+                    "__html": "li",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem",
+                        "color": "var(--text-main)",
+                        "font-weight": "500"
+                    },
+                    "mobile": {}
+                },
+                "HeroListItemTwo": {
+                    "__html": "li",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem",
+                        "color": "var(--text-main)",
+                        "font-weight": "500"
+                    },
+                    "mobile": {}
+                },
+                "HeroListItemThree": {
+                    "__html": "li",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.75rem",
+                        "color": "var(--text-main)",
+                        "font-weight": "500"
+                    },
+                    "mobile": {}
+                },
+                "ListIcon": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {}
+                },
+                "HeroForm": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "2rem",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "padding": "1.5rem"
+                    }
+                },
+                "FormTitle": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "text-align": "center"
+                    }
+                },
+                "FormSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "0.9rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {
+                        "text-align": "center"
+                    }
+                },
+                "FormGroupOne": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupTwo": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupThree": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormLabel": {
+                    "__html": "label",
+                    "base": {
+                        "display": "block",
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "font-size": "0.85rem",
+                        "margin-bottom": "0.3rem"
+                    },
+                    "mobile": {}
+                },
+                "FormInputOne": {
+                    "__html": "input",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.85rem 1rem",
+                        "color": "var(--text-main)",
+                        "font-size": "0.95rem",
+                        "font-family": "var(--font-main)",
+                        "outline": "none",
+                        "transition": "border-color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "FormInputTwo": {
+                    "__html": "input",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.85rem 1rem",
+                        "color": "var(--text-main)",
+                        "font-size": "0.95rem",
+                        "font-family": "var(--font-main)",
+                        "outline": "none",
+                        "transition": "border-color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "FormSelect": {
+                    "__html": "select",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.85rem 1rem",
+                        "color": "var(--text-main)",
+                        "font-size": "0.95rem",
+                        "font-family": "var(--font-main)",
+                        "outline": "none",
+                        "cursor": "pointer"
+                    },
+                    "mobile": {}
+                },
+                "FormSubmit": {
+                    "__html": "button",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--gradient-accent)",
+                        "color": "var(--primary)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.9rem",
+                        "font-weight": "700",
+                        "font-size": "1rem",
+                        "cursor": "pointer",
+                        "transition": "opacity var(--transition-fast)"
+                    },
+                    "mobile": {}
                 }
             },
             "mainContent": {
                 "HeroSection": {
                     "HeroContainer": {
-                        "HeroContent": {
-                            "HeroTitle": {
-                                "content": "Samarkand ",
-                                "HeroTitleGold": {
-                                    "content": "Chess Masters"
+                        "HeroGrid": {
+                            "HeroContent": {
+                                "HeroBadge": {
+                                    "content": "🚀 Старт за 24 часа"
+                                },
+                                "HeroTitle": {
+                                    "content": "Генерируем лендинг"
+                                },
+                                "HeroDescription": {
+                                    "content": "Не просто сайт — а готовый инструмент для генерации лидов. Берём на себя всё: от дизайна до интеграции с вашей CRM."
+                                },
+                                "HeroList": {
+                                    "HeroListItemOne": {
+                                        "content": "✓ Полное сопровождение «под ключ»"
+                                    },
+                                    "HeroListItemTwo": {
+                                        "content": "✓ Интеграция с любой CRM-системой"
+                                    },
+                                    "HeroListItemThree": {
+                                        "content": "✓ Вы получаете лидов, а не картинку"
+                                    }
                                 }
                             },
-                            "HeroImage": {
+                            "HeroForm": {
+                                "FormTitle": {
+                                    "content": "Обсудить проект"
+                                },
+                                "FormSubtitle": {
+                                    "content": "Ответим в течение 15 минут"
+                                },
+                                "FormGroupOne": {
+                                    "FormLabel": {
+                                        "props": {
+                                            "htmlFor": "hero-name"
+                                        },
+                                        "content": "Имя"
+                                    },
+                                    "FormInputOne": {
+                                        "props": {
+                                            "type": "text",
+                                            "id": "hero-name",
+                                            "placeholder": "Алексей"
+                                        }
+                                    }
+                                },
+                                "FormGroupTwo": {
+                                    "FormLabel": {
+                                        "props": {
+                                            "htmlFor": "hero-phone"
+                                        },
+                                        "content": "Телефон"
+                                    },
+                                    "FormInputTwo": {
+                                        "props": {
+                                            "type": "tel",
+                                            "id": "hero-phone",
+                                            "placeholder": "+7 (___) ___-__-__"
+                                        }
+                                    }
+                                },
+                                "FormGroupThree": {
+                                    "FormLabel": {
+                                        "props": {
+                                            "htmlFor": "hero-service"
+                                        },
+                                        "content": "Интересует"
+                                    },
+                                    "FormSelect": {
+                                        "props": {
+                                            "id": "hero-service"
+                                        }
+                                    }
+                                },
+                                "FormSubmit": {
+                                    "props": {
+                                        "type": "submit"
+                                    },
+                                    "content": "Отправить заявку"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "SloganBlock": {
+            "styles": {
+                "SloganSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "4rem 2rem",
+                        "background": "var(--primary)",
+                        "font-family": "var(--font-main)",
+                        "text-align": "center"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "SloganContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "900px",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SloganText": {
+                    "__html": "p",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 5vw, 3.5rem)",
+                        "font-weight": "700",
+                        "color": "white",
+                        "line-height": "1.3",
+                        "margin": "0"
+                    },
+                    "mobile": {
+                        "font-size": "1.8rem"
+                    }
+                },
+                "SloganAccent": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "SloganSection": {
+                    "SloganContainer": {
+                        "SloganText": {
+                            "content": "Мы не делаем «красивые сайты». ",
+                            "SloganAccent": {
+                                "content": "Мы делаем лидогенераторы."
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Services": {
+            "styles": {
+                "ServicesSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "ServicesContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "text-align": "center",
+                        "margin-bottom": "2.5rem"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 2.75rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "SectionSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "font-size": "1.1rem"
+                    },
+                    "mobile": {}
+                },
+                "ServicesGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr"
+                    }
+                },
+                "ServiceCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "2rem",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "transform var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "ServiceCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "2rem",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "transform var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "ServiceCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface-elevated)",
+                        "border-radius": "var(--border-radius-md)",
+                        "padding": "2rem",
+                        "border": "1px solid var(--border-light)",
+                        "transition": "transform var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "CardIcon": {
+                    "__html": "div",
+                    "base": {
+                        "font-size": "2.25rem",
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "CardTitle": {
+                    "__html": "h3",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.4rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.75rem"
+                    },
+                    "mobile": {}
+                },
+                "CardDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.6"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "ServicesSection": {
+                    "ServicesContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Что вы получаете"
+                            },
+                            "SectionSubtitle": {
+                                "content": "Больше, чем просто вёрстка"
+                            }
+                        },
+                        "ServicesGrid": {
+                            "ServiceCardOne": {
+                                "CardIcon": {
+                                    "content": "⚡"
+                                },
+                                "CardTitle": {
+                                    "content": "Старт за 24 часа"
+                                },
+                                "CardDesc": {
+                                    "content": "От брифа до запуска — одни сутки. Без потери качества и с полной отчётностью."
+                                }
+                            },
+                            "ServiceCardTwo": {
+                                "CardIcon": {
+                                    "content": "🔄"
+                                },
+                                "CardTitle": {
+                                    "content": "CRM-интеграция"
+                                },
+                                "CardDesc": {
+                                    "content": "amoCRM, Bitrix24, HubSpot, YandexMetrika — подключим любую систему"
+                                }
+                            },
+                            "ServiceCardThree": {
+                                "CardIcon": {
+                                    "content": "📊"
+                                },
+                                "CardTitle": {
+                                    "content": "Конверсия сразу"
+                                },
+                                "CardDesc": {
+                                    "content": "Вы платите за готовый продукт, который принесет заявки уже завтра"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Portfolio": {
+            "styles": {
+                "PortfolioSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "PortfolioContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {
+                        "text-align": "center"
+                    }
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 2.75rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {}
+                },
+                "PortfolioGrid": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(3, 1fr)",
+                        "gap": "2rem"
+                    },
+                    "mobile": {
+                        "grid-template-columns": "1fr"
+                    }
+                },
+                "PortfolioCardOne": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-md)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {}
+                },
+                "PortfolioCardTwo": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-md)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {}
+                },
+                "PortfolioCardThree": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-md)",
+                        "overflow": "hidden",
+                        "border": "1px solid var(--border-light)",
+                        "box-shadow": "var(--shadow-md)"
+                    },
+                    "mobile": {}
+                },
+                "CardImage": {
+                    "__html": "div",
+                    "base": {
+                        "height": "220px",
+                        "background": "var(--primary-light)",
+                        "position": "relative"
+                    },
+                    "mobile": {
+                        "height": "200px"
+                    }
+                },
+                "CardImageImg": {
+                    "__html": "img",
+                    "base": {
+                        "width": "100%",
+                        "height": "100%",
+                        "object-fit": "cover"
+                    },
+                    "mobile": {}
+                },
+                "CardTag": {
+                    "__html": "span",
+                    "base": {
+                        "position": "absolute",
+                        "top": "1rem",
+                        "left": "1rem",
+                        "background": "var(--accent)",
+                        "color": "var(--primary)",
+                        "padding": "0.2rem 0.75rem",
+                        "border-radius": "var(--border-radius-full)",
+                        "font-size": "0.7rem",
+                        "font-weight": "700",
+                        "text-transform": "uppercase"
+                    },
+                    "mobile": {}
+                },
+                "CardContent": {
+                    "__html": "div",
+                    "base": {
+                        "padding": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "CardTitle": {
+                    "__html": "h3",
+                    "base": {
+                        "font-size": "1.2rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.25rem"
+                    },
+                    "mobile": {}
+                },
+                "CardMeta": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.85rem"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "PortfolioSection": {
+                    "PortfolioContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Последние кейсы"
+                            }
+                        },
+                        "PortfolioGrid": {
+                            "PortfolioCardOne": {
+                                "CardImage": {
+                                    "CardImageImg": {
+                                        "props": {
+                                            "src": "",
+                                            "alt": "Лендинг авиакомпании"
+                                        }
+                                    },
+                                    "CardTag": {
+                                        "content": "Авиа"
+                                    }
+                                },
+                                "CardContent": {
+                                    "CardTitle": {
+                                        "content": "SkyVista Airlines"
+                                    },
+                                    "CardMeta": {
+                                        "content": "Конверсия 4.2%"
+                                    }
+                                }
+                            },
+                            "PortfolioCardTwo": {
+                                "CardImage": {
+                                    "CardImageImg": {
+                                        "props": {
+                                            "src": "",
+                                            "alt": "Лендинг ресторана"
+                                        }
+                                    },
+                                    "CardTag": {
+                                        "content": "HoReCa"
+                                    }
+                                },
+                                "CardContent": {
+                                    "CardTitle": {
+                                        "content": "La Pasta"
+                                    },
+                                    "CardMeta": {
+                                        "content": "Броней +37%"
+                                    }
+                                }
+                            },
+                            "PortfolioCardThree": {
+                                "CardImage": {
+                                    "CardImageImg": {
+                                        "props": {
+                                            "src": "",
+                                            "alt": "Лендинг автосалона"
+                                        }
+                                    },
+                                    "CardTag": {
+                                        "content": "Auto"
+                                    }
+                                },
+                                "CardContent": {
+                                    "CardTitle": {
+                                        "content": "Motorix"
+                                    },
+                                    "CardMeta": {
+                                        "content": "Лидов +52%"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Steps": {
+            "styles": {
+                "StepsSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "StepsContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "1000px",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "SectionHeader": {
+                    "__html": "div",
+                    "base": {
+                        "text-align": "center",
+                        "margin-bottom": "4rem"
+                    },
+                    "mobile": {}
+                },
+                "SectionTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "clamp(2rem, 4vw, 2.75rem)",
+                        "color": "var(--text-main)",
+                        "font-weight": "700"
+                    },
+                    "mobile": {}
+                },
+                "StepsList": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "flex-direction": "column",
+                        "gap": "1rem"
+                    },
+                    "mobile": {}
+                },
+                "StepItemOne": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "60px 1fr",
+                        "gap": "2rem",
+                        "padding": "1.5rem 0",
+                        "border-bottom": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "gap": "1rem"
+                    }
+                },
+                "StepItemTwo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "60px 1fr",
+                        "gap": "2rem",
+                        "padding": "1.5rem 0",
+                        "border-bottom": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "gap": "1rem"
+                    }
+                },
+                "StepItemThree": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "60px 1fr",
+                        "gap": "2rem",
+                        "padding": "1.5rem 0",
+                        "border-bottom": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "gap": "1rem"
+                    }
+                },
+                "StepItemFour": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "60px 1fr",
+                        "gap": "2rem",
+                        "padding": "1.5rem 0",
+                        "border-bottom": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "gap": "1rem"
+                    }
+                },
+                "StepItemFive": {
+                    "__html": "div",
+                    "base": {
+                        "display": "grid",
+                        "grid-template-columns": "60px 1fr",
+                        "gap": "2rem",
+                        "padding": "1.5rem 0"
+                    },
+                    "mobile": {
+                        "gap": "1rem"
+                    }
+                },
+                "StepNumber": {
+                    "__html": "div",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "2.5rem",
+                        "font-weight": "700",
+                        "color": "var(--accent)",
+                        "line-height": "1"
+                    },
+                    "mobile": {
+                        "font-size": "2rem"
+                    }
+                },
+                "StepContent": {
+                    "__html": "div",
+                    "base": {},
+                    "mobile": {}
+                },
+                "StepTitle": {
+                    "__html": "h3",
+                    "base": {
+                        "font-size": "1.3rem",
+                        "font-weight": "600",
+                        "color": "var(--text-main)",
+                        "margin-bottom": "0.25rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.1rem"
+                    }
+                },
+                "StepDesc": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "line-height": "1.5"
+                    },
+                    "mobile": {
+                        "font-size": "0.9rem"
+                    }
+                }
+            },
+            "mainContent": {
+                "StepsSection": {
+                    "StepsContainer": {
+                        "SectionHeader": {
+                            "SectionTitle": {
+                                "content": "Как мы работаем"
+                            }
+                        },
+                        "StepsList": {
+                            "StepItemOne": {
+                                "StepNumber": {
+                                    "content": "01"
+                                },
+                                "StepContent": {
+                                    "StepTitle": {
+                                        "content": "Короткий брифинг (30 минут)"
+                                    },
+                                    "StepDesc": {
+                                        "content": "Созваниваемся, фиксируем цели, ЦА, оффер. Формируем ТЗ в реальном времени."
+                                    }
+                                }
+                            },
+                            "StepItemTwo": {
+                                "StepNumber": {
+                                    "content": "02"
+                                },
+                                "StepContent": {
+                                    "StepTitle": {
+                                        "content": "5 макетов на выбор"
+                                    },
+                                    "StepDesc": {
+                                        "content": "Вы получаете 5 вариантов первого экрана. Выбираете лучший — его и верстаем."
+                                    }
+                                }
+                            },
+                            "StepItemThree": {
+                                "StepNumber": {
+                                    "content": "03"
+                                },
+                                "StepContent": {
+                                    "StepTitle": {
+                                        "content": "Реализация за 1 день"
+                                    },
+                                    "StepDesc": {
+                                        "content": "Верстаем, подключаем формы, настраиваем аналитику. Вы получаете ссылку на тестовый домен."
+                                    }
+                                }
+                            },
+                            "StepItemFour": {
+                                "StepNumber": {
+                                    "content": "04"
+                                },
+                                "StepContent": {
+                                    "StepTitle": {
+                                        "content": "Деплой на ваш хостинг"
+                                    },
+                                    "StepDesc": {
+                                        "content": "Помогаем с размещением на любом хостинге или передаём архив с исходниками."
+                                    }
+                                }
+                            },
+                            "StepItemFive": {
+                                "StepNumber": {
+                                    "content": "05"
+                                },
+                                "StepContent": {
+                                    "StepTitle": {
+                                        "content": "Поддержка в течение года"
+                                    },
+                                    "StepDesc": {
+                                        "content": "Бесплатные правки по вёрстке, консультации по улучшению конверсии."
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "ContactForm": {
+            "styles": {
+                "ContactSection": {
+                    "__html": "section",
+                    "base": {
+                        "padding": "6rem 2rem",
+                        "background": "var(--background-alt)",
+                        "font-family": "var(--font-main)"
+                    },
+                    "mobile": {
+                        "padding": "3rem 1rem"
+                    }
+                },
+                "ContactContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "600px",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "ContactCard": {
+                    "__html": "div",
+                    "base": {
+                        "background": "var(--surface)",
+                        "border-radius": "var(--border-radius-lg)",
+                        "padding": "3rem",
+                        "box-shadow": "var(--shadow-lg)",
+                        "border": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "padding": "2rem 1.5rem"
+                    }
+                },
+                "FormTitle": {
+                    "__html": "h2",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "2rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)",
+                        "text-align": "center",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {
+                        "font-size": "1.6rem"
+                    }
+                },
+                "FormSubtitle": {
+                    "__html": "p",
+                    "base": {
+                        "text-align": "center",
+                        "color": "var(--text-muted)",
+                        "margin-bottom": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupOne": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "1.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormGroupTwo": {
+                    "__html": "div",
+                    "base": {
+                        "margin-bottom": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "FormLabel": {
+                    "__html": "label",
+                    "base": {
+                        "display": "block",
+                        "color": "var(--text-main)",
+                        "font-weight": "500",
+                        "margin-bottom": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FormInputOne": {
+                    "__html": "input",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.9rem 1rem",
+                        "color": "var(--text-main)",
+                        "font-family": "var(--font-main)",
+                        "outline": "none"
+                    },
+                    "mobile": {}
+                },
+                "FormInputTwo": {
+                    "__html": "input",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--background-alt)",
+                        "border": "1px solid var(--border-light)",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "0.9rem 1rem",
+                        "color": "var(--text-main)",
+                        "font-family": "var(--font-main)",
+                        "outline": "none"
+                    },
+                    "mobile": {}
+                },
+                "FormSubmit": {
+                    "__html": "button",
+                    "base": {
+                        "width": "100%",
+                        "background": "var(--gradient-accent)",
+                        "color": "var(--primary)",
+                        "border": "none",
+                        "border-radius": "var(--border-radius-sm)",
+                        "padding": "1rem",
+                        "font-weight": "700",
+                        "font-size": "1.1rem",
+                        "cursor": "pointer"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "ContactSection": {
+                    "ContactContainer": {
+                        "ContactCard": {
+                            "FormTitle": {
+                                "content": "Готовы обсудить проект?"
+                            },
+                            "FormSubtitle": {
+                                "content": "Оставьте контакты — мы перезвоним сегодня"
+                            },
+                            "FormGroupOne": {
+                                "FormLabel": {
+                                    "props": {
+                                        "htmlFor": "contact-name"
+                                    },
+                                    "content": "Имя"
+                                },
+                                "FormInputOne": {
+                                    "props": {
+                                        "type": "text",
+                                        "id": "contact-name",
+                                        "placeholder": "Алексей"
+                                    }
+                                }
+                            },
+                            "FormGroupTwo": {
+                                "FormLabel": {
+                                    "props": {
+                                        "htmlFor": "contact-phone"
+                                    },
+                                    "content": "Телефон"
+                                },
+                                "FormInputTwo": {
+                                    "props": {
+                                        "type": "tel",
+                                        "id": "contact-phone",
+                                        "placeholder": "+7 (___) ___-__-__"
+                                    }
+                                }
+                            },
+                            "FormSubmit": {
                                 "props": {
-                                    "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsEdt589p3IHkQjX4BFqxNxpfESnbeOJ6M2A&s"
+                                    "type": "submit"
+                                },
+                                "content": "Отправить заявку"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "Footer": {
+            "styles": {
+                "FooterWrapper": {
+                    "__html": "footer",
+                    "base": {
+                        "background": "var(--background-alt)",
+                        "padding": "3rem 2rem 2rem",
+                        "font-family": "var(--font-main)",
+                        "border-top": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "padding": "2rem 1rem 1.5rem"
+                    }
+                },
+                "FooterContainer": {
+                    "__html": "div",
+                    "base": {
+                        "max-width": "var(--container-width)",
+                        "margin": "0 auto"
+                    },
+                    "mobile": {}
+                },
+                "FooterTop": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center",
+                        "padding-bottom": "2rem",
+                        "border-bottom": "1px solid var(--border-light)"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1.5rem"
+                    }
+                },
+                "FooterLogo": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "0.5rem"
+                    },
+                    "mobile": {}
+                },
+                "FooterLogoIcon": {
+                    "__html": "span",
+                    "base": {
+                        "font-size": "1.5rem",
+                        "line-height": "1",
+                        "color": "var(--accent)"
+                    },
+                    "mobile": {}
+                },
+                "FooterLogoText": {
+                    "__html": "span",
+                    "base": {
+                        "font-family": "var(--font-display)",
+                        "font-size": "1.5rem",
+                        "font-weight": "700",
+                        "color": "var(--text-main)"
+                    },
+                    "mobile": {}
+                },
+                "FooterNav": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "2.5rem"
+                    },
+                    "mobile": {
+                        "gap": "2rem"
+                    }
+                },
+                "FooterLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "cursor": "pointer",
+                        "font-size": "0.95rem",
+                        "font-weight": "500",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "cursor": "pointer",
+                        "font-size": "0.95rem",
+                        "font-weight": "500",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "FooterLinkThree": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "cursor": "pointer",
+                        "font-size": "0.95rem",
+                        "font-weight": "500",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "FooterBottom": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "justify-content": "space-between",
+                        "align-items": "center",
+                        "padding-top": "2rem"
+                    },
+                    "mobile": {
+                        "flex-direction": "column",
+                        "gap": "1rem",
+                        "text-align": "center"
+                    }
+                },
+                "FooterCopy": {
+                    "__html": "p",
+                    "base": {
+                        "color": "var(--text-light)",
+                        "font-size": "0.9rem",
+                        "margin": "0"
+                    },
+                    "mobile": {}
+                },
+                "FooterSocial": {
+                    "__html": "div",
+                    "base": {
+                        "display": "flex",
+                        "gap": "2rem"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkOne": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "cursor": "pointer",
+                        "font-size": "0.9rem",
+                        "font-weight": "500",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                },
+                "SocialLinkTwo": {
+                    "__html": "span",
+                    "base": {
+                        "color": "var(--text-muted)",
+                        "cursor": "pointer",
+                        "font-size": "0.9rem",
+                        "font-weight": "500",
+                        "transition": "color var(--transition-fast)"
+                    },
+                    "mobile": {}
+                }
+            },
+            "mainContent": {
+                "FooterWrapper": {
+                    "FooterContainer": {
+                        "FooterTop": {
+                            "FooterLogo": {
+                                "FooterLogoIcon": {
+                                    "content": "⚡"
+                                },
+                                "FooterLogoText": {
+                                    "content": "LandX"
+                                }
+                            },
+                            "FooterNav": {
+                                "FooterLinkOne": {
+                                    "content": "Услуги"
+                                },
+                                "FooterLinkTwo": {
+                                    "content": "Кейсы"
+                                },
+                                "FooterLinkThree": {
+                                    "content": "Контакты"
+                                }
+                            }
+                        },
+                        "FooterBottom": {
+                            "FooterCopy": {
+                                "content": "© 2026 LandX. Продаём лидов, а не пиксели."
+                            },
+                            "FooterSocial": {
+                                "SocialLinkOne": {
+                                    "content": "Telegram"
+                                },
+                                "SocialLinkTwo": {
+                                    "content": "Email"
                                 }
                             }
                         }
