@@ -1,9 +1,7 @@
-"use client"
-import React, { useRef, type ReactNode } from "react";
-import { LightningLetter, LightningParagraph, WordWrapper } from "./styled";
+import { type ReactNode, type CSSProperties } from "react";
+import styles from './index.module.css'
 
 export const LightningText = ({ children, ...props }: { children: ReactNode }) => {
-    const containerRef = useRef(null);
     // Разбиваем текст на отдельные символы
     const text = typeof children === 'string' ? children : '';
 
@@ -38,19 +36,20 @@ export const LightningText = ({ children, ...props }: { children: ReactNode }) =
 
             // Обработка слова
             const wordElement = (
-                <WordWrapper key={`word-${segmentIndex}`}>
+                <span key={`word-${segmentIndex}`} className={styles.wordWrapper}>
                     {segment.split('').map((char, charIndex) => {
                         const currentIndex = globalCharIndex + charIndex;
                         return (
-                            <LightningLetter
+                            <span
+                                className={styles.lightningLetter}
                                 key={`char-${segmentIndex}-${charIndex}`}
-                                $charIndex={currentIndex}
+                                style={{ "--i": currentIndex } as CSSProperties}
                             >
                                 {char}
-                            </LightningLetter>
+                            </span>
                         );
                     })}
-                </WordWrapper>
+                </span>
             );
 
             elements.push(wordElement);
@@ -61,8 +60,8 @@ export const LightningText = ({ children, ...props }: { children: ReactNode }) =
     };
 
     return (
-        <LightningParagraph {...props}>
+        <p className={styles.lightningParagraph} {...props}>
             {renderText()}
-        </LightningParagraph>
+        </p>
     );
 };

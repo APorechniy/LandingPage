@@ -9,16 +9,16 @@ import { Footer } from '@/sections/Footer';
 import './global.css'
 
 export default function Page() {
-  return (
-    <>
-      <Header />
-      <Hero />
-      <SloganBlock />
-      <Services />
-      <Portfolio />
-      <Steps />
-      <ContactForm />
-      <Footer />
-    </>
-  );
+    return (
+      <main>
+        <Header />
+        <Hero />
+        <SloganBlock />
+        <Services />
+        <Portfolio />
+        <Steps />
+        <ContactForm />
+        <Footer />
+      </main>
+    );
 };

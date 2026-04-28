@@ -1,20 +1,11 @@
-import { LoaderWrapper, Spinner } from "./styled";
+import styles from './index.module.css'
 
-export const Loader = ({
-    size = 16,
-    strokeWidth = 3,
-    color = 'var(--primary)',
-    activeColor = '#333',
-    fullPage = false
-}) => {
+export const Loader = () => {
     return (
-        <LoaderWrapper $fullPage={fullPage}>
-            <Spinner
-                $size={size}
-                $strokeWidth={strokeWidth}
-                $color={color}
-                $activeColor={activeColor}
+        <div className={styles.loaderWrapper}>
+            <div
+                className={styles.spinner}
             />
-        </LoaderWrapper>
+        </div>
     );
 };

@@ -1,18 +1,28 @@
 import { Logo } from "@/components/Logo";
-import { HeaderContainer, HeaderCta, HeaderWrapper, NavContainer, NavItemOne, NavItemThree, NavItemTwo } from "./styled";
+import styles from "./index.module.css";
 
 export const Header = () => {
     return (
-        <HeaderWrapper >
-            <HeaderContainer >
-                <Logo />
-                <NavContainer >
-                    <NavItemOne href="#services">Услуги</NavItemOne>
-                    <NavItemTwo href="#portfolio">Кейсы</NavItemTwo>
-                    <NavItemThree href="#steps">Процесс</NavItemThree>
-                </NavContainer>
-                <HeaderCta href="#contact-form">Обсудить проект</HeaderCta>
-            </HeaderContainer>
-        </HeaderWrapper>
+        <header className={styles.headerWrapper} >
+            <div className={styles.headerContainer} >
+                <div className={styles.logoContainer} >
+                    <Logo />
+                </div>
+                <nav className={styles.navContainer} >
+                    <a className={styles.navItem} href='#services' >
+                        Услуги
+                    </a>
+                    <a className={styles.navItem} href='#portfolio' >
+                        Кейсы
+                    </a>
+                    <a className={styles.navItem} href='#steps' >
+                        Процесс
+                    </a>
+                </nav>
+                <a className={styles.headerCta} href="#contact-form">
+                    Обсудить проект
+                </a>
+            </div>
+        </header>
     );
 };

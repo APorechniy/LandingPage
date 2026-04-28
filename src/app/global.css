@@ -2,7 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    background: var(--background-alt);
     scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
 }
 
 select {
@@ -78,8 +86,4 @@ select {
     --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
     --gradient-hero: linear-gradient(135deg, #0f1620 0%, #131c26 100%);
     --gradient-accent: linear-gradient(135deg, #00e676 0%, #69f0ae 100%);
-}
-
-html {
-    background-color: var(--background-alt);
 }

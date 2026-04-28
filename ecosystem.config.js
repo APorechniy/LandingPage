@@ -8,6 +8,7 @@ module.exports = {
         env: {
             NODE_ENV: 'production',
             PORT: 3000,
+            host: "0.0.0.0"
         },
 
         max_memory_restart: '1G',

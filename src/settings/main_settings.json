@@ -58,8 +58,7 @@
     "sections": {
         "Header": {
             "styles": {
-                "HeaderWrapper": {
-                    "__html": "header",
+                "headerWrapper": {
                     "base": {
                         "position": "fixed",
                         "top": "0",
@@ -71,12 +70,9 @@
                         "font-family": "var(--font-main)",
                         "box-shadow": "var(--shadow-sm)"
                     },
-                    "mobile": {
-                        "background": "var(--surface)"
-                    }
+                    "mobile": {}
                 },
-                "HeaderContainer": {
-                    "__html": "div",
+                "headerContainer": {
                     "base": {
                         "max-width": "var(--container-width)",
                         "margin": "0 auto",
@@ -89,8 +85,7 @@
                         "padding": "0.75rem 1rem"
                     }
                 },
-                "LogoContainer": {
-                    "__html": "div",
+                "logoContainer": {
                     "base": {
                         "display": "flex",
                         "align-items": "center",
@@ -98,8 +93,7 @@
                     },
                     "mobile": {}
                 },
-                "LogoIcon": {
-                    "__html": "span",
+                "logoIcon": {
                     "base": {
                         "font-size": "1.75rem",
                         "line-height": "1",
@@ -110,8 +104,7 @@
                         "font-size": "1.5rem"
                     }
                 },
-                "LogoText": {
-                    "__html": "span",
+                "logoText": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "1.5rem",
@@ -123,8 +116,7 @@
                         "font-size": "1.25rem"
                     }
                 },
-                "NavContainer": {
-                    "__html": "nav",
+                "navContainer": {
                     "base": {
                         "display": "flex",
                         "align-items": "center",
@@ -134,44 +126,21 @@
                         "display": "none"
                     }
                 },
-                "NavItemOne": {
-                    "__html": "a",
+                "navItem": {
                     "base": {
                         "color": "var(--text-muted)",
                         "font-weight": "500",
                         "font-size": "0.95rem",
                         "cursor": "pointer",
-                        "transition": "color var(--transition-fast)"
+                        "transition": "color var(--transition-fast)",
+                        "text-decoration": "none"
                     },
                     "mobile": {}
                 },
-                "NavItemTwo": {
-                    "__html": "a",
-                    "base": {
-                        "color": "var(--text-muted)",
-                        "font-weight": "500",
-                        "font-size": "0.95rem",
-                        "cursor": "pointer",
-                        "transition": "color var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "NavItemThree": {
-                    "__html": "a",
-                    "base": {
-                        "color": "var(--text-muted)",
-                        "font-weight": "500",
-                        "font-size": "0.95rem",
-                        "cursor": "pointer",
-                        "transition": "color var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "HeaderCta": {
-                    "__html": "button",
+                "headerCta": {
                     "base": {
                         "background": "var(--primary)",
-                        "color": "var(--text-light)",
+                        "color": "var(--text-inverse)",
                         "border": "none",
                         "border-radius": "var(--border-radius-sm)",
                         "padding": "0.65rem 1.5rem",
@@ -187,47 +156,72 @@
                 }
             },
             "mainContent": {
-                "HeaderWrapper": {
-                    "HeaderContainer": {
-                        "LogoContainer": {
-                            "LogoIcon": {
-                                "content": "⚡"
+                "tag": "header",
+                "className": "headerWrapper",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "headerContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "logoContainer",
+                                "childrens": [
+                                    {
+                                        "tag": "span",
+                                        "className": "logoIcon",
+                                        "content": "⚡"
+                                    },
+                                    {
+                                        "tag": "span",
+                                        "className": "logoText",
+                                        "content": "LandX"
+                                    }
+                                ]
                             },
-                            "LogoText": {
-                                "content": "LandX"
+                            {
+                                "tag": "nav",
+                                "className": "navContainer",
+                                "childrens": [
+                                    {
+                                        "tag": "a",
+                                        "className": "navItem",
+                                        "props": {
+                                            "href": "#services"
+                                        },
+                                        "content": "Услуги"
+                                    },
+                                    {
+                                        "tag": "a",
+                                        "className": "navItem",
+                                        "props": {
+                                            "href": "#portfolio"
+                                        },
+                                        "content": "Кейсы"
+                                    },
+                                    {
+                                        "tag": "a",
+                                        "className": "navItem",
+                                        "props": {
+                                            "href": "#steps"
+                                        },
+                                        "content": "Процесс"
+                                    }
+                                ]
+                            },
+                            {
+                                "tag": "button",
+                                "className": "headerCta",
+                                "content": "Обсудить проект"
                             }
-                        },
-                        "NavContainer": {
-                            "NavItemOne": {
-                                "content": "Услуги",
-                                "props": {
-                                    "href": "#services"
-                                }
-                            },
-                            "NavItemTwo": {
-                                "content": "Кейсы",
-                                "props": {
-                                    "href": "#portfolio"
-                                }
-                            },
-                            "NavItemThree": {
-                                "content": "Процесс",
-                                "props": {
-                                    "href": "#steps"
-                                }
-                            }
-                        },
-                        "HeaderCta": {
-                            "content": "Обсудить проект"
-                        }
+                        ]
                     }
-                }
+                ]
             }
         },
         "Hero": {
             "styles": {
-                "HeroSection": {
-                    "__html": "section",
+                "heroSection": {
                     "base": {
                         "width": "100%",
                         "min-height": "100vh",
@@ -243,8 +237,7 @@
                         "padding": "5rem 1rem 3rem"
                     }
                 },
-                "HeroContainer": {
-                    "__html": "div",
+                "heroContainer": {
                     "base": {
                         "max-width": "var(--container-width)",
                         "margin": "0 auto",
@@ -252,8 +245,7 @@
                     },
                     "mobile": {}
                 },
-                "HeroGrid": {
-                    "__html": "div",
+                "heroGrid": {
                     "base": {
                         "display": "grid",
                         "grid-template-columns": "1.2fr 0.8fr",
@@ -265,8 +257,7 @@
                         "gap": "2.5rem"
                     }
                 },
-                "HeroContent": {
-                    "__html": "div",
+                "heroContent": {
                     "base": {
                         "display": "flex",
                         "flex-direction": "column",
@@ -276,8 +267,7 @@
                         "text-align": "center"
                     }
                 },
-                "HeroBadge": {
-                    "__html": "div",
+                "heroBadge": {
                     "base": {
                         "display": "inline-block",
                         "background": "var(--accent-soft)",
@@ -294,8 +284,7 @@
                         "margin": "0 auto"
                     }
                 },
-                "HeroTitle": {
-                    "__html": "h1",
+                "heroTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "clamp(2.75rem, 5vw, 4rem)",
@@ -308,8 +297,7 @@
                         "font-size": "clamp(2rem, 8vw, 3rem)"
                     }
                 },
-                "HeroTitleAccent": {
-                    "__html": "span",
+                "heroTitleAccent": {
                     "base": {
                         "color": "var(--accent)",
                         "border-bottom": "3px solid var(--accent)",
@@ -317,8 +305,7 @@
                     },
                     "mobile": {}
                 },
-                "HeroDescription": {
-                    "__html": "p",
+                "heroDescription": {
                     "base": {
                         "font-size": "1.2rem",
                         "line-height": "1.6",
@@ -331,8 +318,7 @@
                         "max-width": "100%"
                     }
                 },
-                "HeroList": {
-                    "__html": "ul",
+                "heroList": {
                     "base": {
                         "list-style": "none",
                         "padding": "0",
@@ -345,8 +331,7 @@
                         "align-items": "center"
                     }
                 },
-                "HeroListItemOne": {
-                    "__html": "li",
+                "heroListItem": {
                     "base": {
                         "display": "flex",
                         "align-items": "center",
@@ -356,38 +341,14 @@
                     },
                     "mobile": {}
                 },
-                "HeroListItemTwo": {
-                    "__html": "li",
-                    "base": {
-                        "display": "flex",
-                        "align-items": "center",
-                        "gap": "0.75rem",
-                        "color": "var(--text-main)",
-                        "font-weight": "500"
-                    },
-                    "mobile": {}
-                },
-                "HeroListItemThree": {
-                    "__html": "li",
-                    "base": {
-                        "display": "flex",
-                        "align-items": "center",
-                        "gap": "0.75rem",
-                        "color": "var(--text-main)",
-                        "font-weight": "500"
-                    },
-                    "mobile": {}
-                },
-                "ListIcon": {
-                    "__html": "span",
+                "listIcon": {
                     "base": {
                         "color": "var(--accent)",
                         "font-weight": "700"
                     },
                     "mobile": {}
                 },
-                "HeroForm": {
-                    "__html": "div",
+                "heroForm": {
                     "base": {
                         "background": "var(--surface)",
                         "border-radius": "var(--border-radius-lg)",
@@ -399,8 +360,7 @@
                         "padding": "1.5rem"
                     }
                 },
-                "FormTitle": {
-                    "__html": "h3",
+                "formTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "1.5rem",
@@ -412,8 +372,7 @@
                         "text-align": "center"
                     }
                 },
-                "FormSubtitle": {
-                    "__html": "p",
+                "formSubtitle": {
                     "base": {
                         "color": "var(--text-muted)",
                         "font-size": "0.9rem",
@@ -423,29 +382,19 @@
                         "text-align": "center"
                     }
                 },
-                "FormGroupOne": {
-                    "__html": "div",
+                "formGroup": {
                     "base": {
                         "margin-bottom": "1rem"
                     },
                     "mobile": {}
                 },
-                "FormGroupTwo": {
-                    "__html": "div",
-                    "base": {
-                        "margin-bottom": "1rem"
-                    },
-                    "mobile": {}
-                },
-                "FormGroupThree": {
-                    "__html": "div",
+                "formGroupLast": {
                     "base": {
                         "margin-bottom": "1.5rem"
                     },
                     "mobile": {}
                 },
-                "FormLabel": {
-                    "__html": "label",
+                "formLabel": {
                     "base": {
                         "display": "block",
                         "color": "var(--text-main)",
@@ -455,8 +404,7 @@
                     },
                     "mobile": {}
                 },
-                "FormInputOne": {
-                    "__html": "input",
+                "formInput": {
                     "base": {
                         "width": "100%",
                         "background": "var(--background-alt)",
@@ -471,24 +419,7 @@
                     },
                     "mobile": {}
                 },
-                "FormInputTwo": {
-                    "__html": "input",
-                    "base": {
-                        "width": "100%",
-                        "background": "var(--background-alt)",
-                        "border": "1px solid var(--border-light)",
-                        "border-radius": "var(--border-radius-sm)",
-                        "padding": "0.85rem 1rem",
-                        "color": "var(--text-main)",
-                        "font-size": "0.95rem",
-                        "font-family": "var(--font-main)",
-                        "outline": "none",
-                        "transition": "border-color var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "FormSelect": {
-                    "__html": "select",
+                "formSelect": {
                     "base": {
                         "width": "100%",
                         "background": "var(--background-alt)",
@@ -503,8 +434,7 @@
                     },
                     "mobile": {}
                 },
-                "FormSubmit": {
-                    "__html": "button",
+                "formSubmit": {
                     "base": {
                         "width": "100%",
                         "background": "var(--gradient-accent)",
@@ -521,97 +451,165 @@
                 }
             },
             "mainContent": {
-                "HeroSection": {
-                    "HeroContainer": {
-                        "HeroGrid": {
-                            "HeroContent": {
-                                "HeroBadge": {
-                                    "content": "🚀 Старт за 24 часа"
-                                },
-                                "HeroTitle": {
-                                    "content": "Генерируем лендинг"
-                                },
-                                "HeroDescription": {
-                                    "content": "Не просто сайт — а готовый инструмент для генерации лидов. Берём на себя всё: от дизайна до интеграции с вашей CRM."
-                                },
-                                "HeroList": {
-                                    "HeroListItemOne": {
-                                        "content": "✓ Полное сопровождение «под ключ»"
+                "tag": "section",
+                "className": "heroSection",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "heroContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "heroGrid",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "heroContent",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "heroBadge",
+                                                "content": "🚀 Старт за 24 часа"
+                                            },
+                                            {
+                                                "tag": "h1",
+                                                "className": "heroTitle",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "span",
+                                                        "content": "Генерируем лендинг"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "heroDescription",
+                                                "content": "Не просто сайт — а готовый инструмент для генерации лидов. Берём на себя всё: от дизайна до интеграции с вашей CRM."
+                                            },
+                                            {
+                                                "tag": "ul",
+                                                "className": "heroList",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "li",
+                                                        "className": "heroListItem",
+                                                        "content": "✓ Полное сопровождение «под ключ»"
+                                                    },
+                                                    {
+                                                        "tag": "li",
+                                                        "className": "heroListItem",
+                                                        "content": "✓ Интеграция с любой CRM-системой"
+                                                    },
+                                                    {
+                                                        "tag": "li",
+                                                        "className": "heroListItem",
+                                                        "content": "✓ Вы получаете лидов, а не картинку"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     },
-                                    "HeroListItemTwo": {
-                                        "content": "✓ Интеграция с любой CRM-системой"
-                                    },
-                                    "HeroListItemThree": {
-                                        "content": "✓ Вы получаете лидов, а не картинку"
+                                    {
+                                        "tag": "div",
+                                        "className": "heroForm",
+                                        "childrens": [
+                                            {
+                                                "tag": "h3",
+                                                "className": "formTitle",
+                                                "content": "Обсудить проект"
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "formSubtitle",
+                                                "content": "Ответим в течение 15 минут"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "formGroup",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "label",
+                                                        "className": "formLabel",
+                                                        "props": {
+                                                            "htmlFor": "hero-name"
+                                                        },
+                                                        "content": "Имя"
+                                                    },
+                                                    {
+                                                        "tag": "input",
+                                                        "className": "formInput",
+                                                        "props": {
+                                                            "type": "text",
+                                                            "id": "hero-name",
+                                                            "placeholder": "Алексей"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "formGroup",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "label",
+                                                        "className": "formLabel",
+                                                        "props": {
+                                                            "htmlFor": "hero-phone"
+                                                        },
+                                                        "content": "Телефон"
+                                                    },
+                                                    {
+                                                        "tag": "input",
+                                                        "className": "formInput",
+                                                        "props": {
+                                                            "type": "tel",
+                                                            "id": "hero-phone",
+                                                            "placeholder": "+7 (___) ___-__-__"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "formGroupLast",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "label",
+                                                        "className": "formLabel",
+                                                        "props": {
+                                                            "htmlFor": "hero-service"
+                                                        },
+                                                        "content": "Интересует"
+                                                    },
+                                                    {
+                                                        "tag": "select",
+                                                        "className": "formSelect",
+                                                        "props": {
+                                                            "id": "hero-service"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "button",
+                                                "className": "formSubmit",
+                                                "props": {
+                                                    "type": "submit"
+                                                },
+                                                "content": "Отправить заявку"
+                                            }
+                                        ]
                                     }
-                                }
-                            },
-                            "HeroForm": {
-                                "FormTitle": {
-                                    "content": "Обсудить проект"
-                                },
-                                "FormSubtitle": {
-                                    "content": "Ответим в течение 15 минут"
-                                },
-                                "FormGroupOne": {
-                                    "FormLabel": {
-                                        "props": {
-                                            "htmlFor": "hero-name"
-                                        },
-                                        "content": "Имя"
-                                    },
-                                    "FormInputOne": {
-                                        "props": {
-                                            "type": "text",
-                                            "id": "hero-name",
-                                            "placeholder": "Алексей"
-                                        }
-                                    }
-                                },
-                                "FormGroupTwo": {
-                                    "FormLabel": {
-                                        "props": {
-                                            "htmlFor": "hero-phone"
-                                        },
-                                        "content": "Телефон"
-                                    },
-                                    "FormInputTwo": {
-                                        "props": {
-                                            "type": "tel",
-                                            "id": "hero-phone",
-                                            "placeholder": "+7 (___) ___-__-__"
-                                        }
-                                    }
-                                },
-                                "FormGroupThree": {
-                                    "FormLabel": {
-                                        "props": {
-                                            "htmlFor": "hero-service"
-                                        },
-                                        "content": "Интересует"
-                                    },
-                                    "FormSelect": {
-                                        "props": {
-                                            "id": "hero-service"
-                                        }
-                                    }
-                                },
-                                "FormSubmit": {
-                                    "props": {
-                                        "type": "submit"
-                                    },
-                                    "content": "Отправить заявку"
-                                }
+                                ]
                             }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         },
         "SloganBlock": {
             "styles": {
-                "SloganSection": {
-                    "__html": "section",
+                "sloganSection": {
                     "base": {
                         "padding": "4rem 2rem",
                         "background": "var(--primary)",
@@ -622,16 +620,14 @@
                         "padding": "3rem 1rem"
                     }
                 },
-                "SloganContainer": {
-                    "__html": "div",
+                "sloganContainer": {
                     "base": {
                         "max-width": "900px",
                         "margin": "0 auto"
                     },
                     "mobile": {}
                 },
-                "SloganText": {
-                    "__html": "p",
+                "sloganText": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "clamp(2rem, 5vw, 3.5rem)",
@@ -644,8 +640,7 @@
                         "font-size": "1.8rem"
                     }
                 },
-                "SloganAccent": {
-                    "__html": "span",
+                "sloganAccent": {
                     "base": {
                         "color": "var(--accent)"
                     },
@@ -653,22 +648,36 @@
                 }
             },
             "mainContent": {
-                "SloganSection": {
-                    "SloganContainer": {
-                        "SloganText": {
-                            "content": "Мы не делаем «красивые сайты». ",
-                            "SloganAccent": {
-                                "content": "Мы делаем лидогенераторы."
+                "tag": "section",
+                "className": "sloganSection",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "sloganContainer",
+                        "childrens": [
+                            {
+                                "tag": "p",
+                                "className": "sloganText",
+                                "childrens": [
+                                    {
+                                        "tag": "span",
+                                        "content": "Мы не делаем «красивые сайты». "
+                                    },
+                                    {
+                                        "tag": "span",
+                                        "className": "sloganAccent",
+                                        "content": "Мы делаем лидогенераторы."
+                                    }
+                                ]
                             }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         },
         "Services": {
             "styles": {
-                "ServicesSection": {
-                    "__html": "section",
+                "servicesSection": {
                     "base": {
                         "padding": "6rem 2rem",
                         "background": "var(--background)",
@@ -678,16 +687,14 @@
                         "padding": "3rem 1rem"
                     }
                 },
-                "ServicesContainer": {
-                    "__html": "div",
+                "servicesContainer": {
                     "base": {
                         "max-width": "var(--container-width)",
                         "margin": "0 auto"
                     },
                     "mobile": {}
                 },
-                "SectionHeader": {
-                    "__html": "div",
+                "sectionHeader": {
                     "base": {
                         "margin-bottom": "4rem"
                     },
@@ -696,8 +703,7 @@
                         "margin-bottom": "2.5rem"
                     }
                 },
-                "SectionTitle": {
-                    "__html": "h2",
+                "sectionTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "clamp(2rem, 4vw, 2.75rem)",
@@ -707,16 +713,14 @@
                     },
                     "mobile": {}
                 },
-                "SectionSubtitle": {
-                    "__html": "p",
+                "sectionSubtitle": {
                     "base": {
                         "color": "var(--text-muted)",
                         "font-size": "1.1rem"
                     },
                     "mobile": {}
                 },
-                "ServicesGrid": {
-                    "__html": "div",
+                "servicesGrid": {
                     "base": {
                         "display": "grid",
                         "grid-template-columns": "repeat(3, 1fr)",
@@ -726,8 +730,7 @@
                         "grid-template-columns": "1fr"
                     }
                 },
-                "ServiceCardOne": {
-                    "__html": "div",
+                "serviceCard": {
                     "base": {
                         "background": "var(--surface-elevated)",
                         "border-radius": "var(--border-radius-md)",
@@ -737,38 +740,14 @@
                     },
                     "mobile": {}
                 },
-                "ServiceCardTwo": {
-                    "__html": "div",
-                    "base": {
-                        "background": "var(--surface-elevated)",
-                        "border-radius": "var(--border-radius-md)",
-                        "padding": "2rem",
-                        "border": "1px solid var(--border-light)",
-                        "transition": "transform var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "ServiceCardThree": {
-                    "__html": "div",
-                    "base": {
-                        "background": "var(--surface-elevated)",
-                        "border-radius": "var(--border-radius-md)",
-                        "padding": "2rem",
-                        "border": "1px solid var(--border-light)",
-                        "transition": "transform var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "CardIcon": {
-                    "__html": "div",
+                "cardIcon": {
                     "base": {
                         "font-size": "2.25rem",
                         "margin-bottom": "1.5rem"
                     },
                     "mobile": {}
                 },
-                "CardTitle": {
-                    "__html": "h3",
+                "cardTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "1.4rem",
@@ -778,8 +757,7 @@
                     },
                     "mobile": {}
                 },
-                "CardDesc": {
-                    "__html": "p",
+                "cardDesc": {
                     "base": {
                         "color": "var(--text-muted)",
                         "line-height": "1.6"
@@ -788,59 +766,106 @@
                 }
             },
             "mainContent": {
-                "ServicesSection": {
-                    "ServicesContainer": {
-                        "SectionHeader": {
-                            "SectionTitle": {
-                                "content": "Что вы получаете"
+                "tag": "section",
+                "className": "servicesSection",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "servicesContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "sectionHeader",
+                                "childrens": [
+                                    {
+                                        "tag": "h2",
+                                        "className": "sectionTitle",
+                                        "content": "Что вы получаете"
+                                    },
+                                    {
+                                        "tag": "p",
+                                        "className": "sectionSubtitle",
+                                        "content": "Больше, чем просто вёрстка"
+                                    }
+                                ]
                             },
-                            "SectionSubtitle": {
-                                "content": "Больше, чем просто вёрстка"
+                            {
+                                "tag": "div",
+                                "className": "servicesGrid",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "serviceCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "cardIcon",
+                                                "content": "⚡"
+                                            },
+                                            {
+                                                "tag": "h3",
+                                                "className": "cardTitle",
+                                                "content": "Старт за 24 часа"
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "cardDesc",
+                                                "content": "От брифа до запуска — одни сутки. Без потери качества и с полной отчётностью."
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "serviceCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "cardIcon",
+                                                "content": "🔄"
+                                            },
+                                            {
+                                                "tag": "h3",
+                                                "className": "cardTitle",
+                                                "content": "CRM-интеграция"
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "cardDesc",
+                                                "content": "amoCRM, Bitrix24, HubSpot, YandexMetrika — подключим любую систему"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "serviceCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "cardIcon",
+                                                "content": "📊"
+                                            },
+                                            {
+                                                "tag": "h3",
+                                                "className": "cardTitle",
+                                                "content": "Конверсия сразу"
+                                            },
+                                            {
+                                                "tag": "p",
+                                                "className": "cardDesc",
+                                                "content": "Вы платите за готовый продукт, который принесет заявки уже завтра"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
-                        },
-                        "ServicesGrid": {
-                            "ServiceCardOne": {
-                                "CardIcon": {
-                                    "content": "⚡"
-                                },
-                                "CardTitle": {
-                                    "content": "Старт за 24 часа"
-                                },
-                                "CardDesc": {
-                                    "content": "От брифа до запуска — одни сутки. Без потери качества и с полной отчётностью."
-                                }
-                            },
-                            "ServiceCardTwo": {
-                                "CardIcon": {
-                                    "content": "🔄"
-                                },
-                                "CardTitle": {
-                                    "content": "CRM-интеграция"
-                                },
-                                "CardDesc": {
-                                    "content": "amoCRM, Bitrix24, HubSpot, YandexMetrika — подключим любую систему"
-                                }
-                            },
-                            "ServiceCardThree": {
-                                "CardIcon": {
-                                    "content": "📊"
-                                },
-                                "CardTitle": {
-                                    "content": "Конверсия сразу"
-                                },
-                                "CardDesc": {
-                                    "content": "Вы платите за готовый продукт, который принесет заявки уже завтра"
-                                }
-                            }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         },
         "Portfolio": {
             "styles": {
-                "PortfolioSection": {
-                    "__html": "section",
+                "portfolioSection": {
                     "base": {
                         "padding": "6rem 2rem",
                         "background": "var(--background-alt)",
@@ -850,16 +875,14 @@
                         "padding": "3rem 1rem"
                     }
                 },
-                "PortfolioContainer": {
-                    "__html": "div",
+                "portfolioContainer": {
                     "base": {
                         "max-width": "var(--container-width)",
                         "margin": "0 auto"
                     },
                     "mobile": {}
                 },
-                "SectionHeader": {
-                    "__html": "div",
+                "sectionHeader": {
                     "base": {
                         "margin-bottom": "4rem"
                     },
@@ -867,8 +890,7 @@
                         "text-align": "center"
                     }
                 },
-                "SectionTitle": {
-                    "__html": "h2",
+                "sectionTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "clamp(2rem, 4vw, 2.75rem)",
@@ -877,8 +899,7 @@
                     },
                     "mobile": {}
                 },
-                "PortfolioGrid": {
-                    "__html": "div",
+                "portfolioGrid": {
                     "base": {
                         "display": "grid",
                         "grid-template-columns": "repeat(3, 1fr)",
@@ -888,8 +909,7 @@
                         "grid-template-columns": "1fr"
                     }
                 },
-                "PortfolioCardOne": {
-                    "__html": "div",
+                "portfolioCard": {
                     "base": {
                         "background": "var(--surface)",
                         "border-radius": "var(--border-radius-md)",
@@ -899,30 +919,7 @@
                     },
                     "mobile": {}
                 },
-                "PortfolioCardTwo": {
-                    "__html": "div",
-                    "base": {
-                        "background": "var(--surface)",
-                        "border-radius": "var(--border-radius-md)",
-                        "overflow": "hidden",
-                        "border": "1px solid var(--border-light)",
-                        "box-shadow": "var(--shadow-md)"
-                    },
-                    "mobile": {}
-                },
-                "PortfolioCardThree": {
-                    "__html": "div",
-                    "base": {
-                        "background": "var(--surface)",
-                        "border-radius": "var(--border-radius-md)",
-                        "overflow": "hidden",
-                        "border": "1px solid var(--border-light)",
-                        "box-shadow": "var(--shadow-md)"
-                    },
-                    "mobile": {}
-                },
-                "CardImage": {
-                    "__html": "div",
+                "cardImage": {
                     "base": {
                         "height": "220px",
                         "background": "var(--primary-light)",
@@ -932,8 +929,7 @@
                         "height": "200px"
                     }
                 },
-                "CardImageImg": {
-                    "__html": "img",
+                "cardImageImg": {
                     "base": {
                         "width": "100%",
                         "height": "100%",
@@ -941,15 +937,14 @@
                     },
                     "mobile": {}
                 },
-                "CardTag": {
-                    "__html": "span",
+                "cardTag": {
                     "base": {
                         "position": "absolute",
                         "top": "1rem",
                         "left": "1rem",
                         "background": "var(--accent)",
                         "color": "var(--primary)",
-                        "padding": "0.2rem 0.75rem",
+                        "padding": "0.25rem 0.75rem",
                         "border-radius": "var(--border-radius-full)",
                         "font-size": "0.7rem",
                         "font-weight": "700",
@@ -957,15 +952,13 @@
                     },
                     "mobile": {}
                 },
-                "CardContent": {
-                    "__html": "div",
+                "cardContent": {
                     "base": {
                         "padding": "1.5rem"
                     },
                     "mobile": {}
                 },
-                "CardTitle": {
-                    "__html": "h3",
+                "cardTitle": {
                     "base": {
                         "font-size": "1.2rem",
                         "font-weight": "600",
@@ -974,8 +967,7 @@
                     },
                     "mobile": {}
                 },
-                "CardMeta": {
-                    "__html": "p",
+                "cardMeta": {
                     "base": {
                         "color": "var(--text-light)",
                         "font-size": "0.85rem"
@@ -984,86 +976,161 @@
                 }
             },
             "mainContent": {
-                "PortfolioSection": {
-                    "PortfolioContainer": {
-                        "SectionHeader": {
-                            "SectionTitle": {
-                                "content": "Последние кейсы"
-                            }
-                        },
-                        "PortfolioGrid": {
-                            "PortfolioCardOne": {
-                                "CardImage": {
-                                    "CardImageImg": {
-                                        "props": {
-                                            "src": "",
-                                            "alt": "Лендинг авиакомпании"
-                                        }
-                                    },
-                                    "CardTag": {
-                                        "content": "Авиа"
+                "tag": "section",
+                "className": "portfolioSection",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "portfolioContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "sectionHeader",
+                                "childrens": [
+                                    {
+                                        "tag": "h2",
+                                        "className": "sectionTitle",
+                                        "content": "Последние кейсы"
                                     }
-                                },
-                                "CardContent": {
-                                    "CardTitle": {
-                                        "content": "SkyVista Airlines"
-                                    },
-                                    "CardMeta": {
-                                        "content": "Конверсия 4.2%"
-                                    }
-                                }
+                                ]
                             },
-                            "PortfolioCardTwo": {
-                                "CardImage": {
-                                    "CardImageImg": {
-                                        "props": {
-                                            "src": "",
-                                            "alt": "Лендинг ресторана"
-                                        }
+                            {
+                                "tag": "div",
+                                "className": "portfolioGrid",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "cardImage",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "img",
+                                                        "className": "cardImageImg",
+                                                        "props": {
+                                                            "src": "",
+                                                            "alt": "Лендинг авиакомпании"
+                                                        }
+                                                    },
+                                                    {
+                                                        "tag": "span",
+                                                        "className": "cardTag",
+                                                        "content": "Авиа"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "cardContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "cardTitle",
+                                                        "content": "SkyVista Airlines"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "cardMeta",
+                                                        "content": "Конверсия 4.2%"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     },
-                                    "CardTag": {
-                                        "content": "HoReCa"
-                                    }
-                                },
-                                "CardContent": {
-                                    "CardTitle": {
-                                        "content": "La Pasta"
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "cardImage",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "img",
+                                                        "className": "cardImageImg",
+                                                        "props": {
+                                                            "src": "",
+                                                            "alt": "Лендинг ресторана"
+                                                        }
+                                                    },
+                                                    {
+                                                        "tag": "span",
+                                                        "className": "cardTag",
+                                                        "content": "HoReCa"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "cardContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "cardTitle",
+                                                        "content": "La Pasta"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "cardMeta",
+                                                        "content": "Броней +37%"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     },
-                                    "CardMeta": {
-                                        "content": "Броней +37%"
+                                    {
+                                        "tag": "div",
+                                        "className": "portfolioCard",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "cardImage",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "img",
+                                                        "className": "cardImageImg",
+                                                        "props": {
+                                                            "src": "",
+                                                            "alt": "Лендинг автосалона"
+                                                        }
+                                                    },
+                                                    {
+                                                        "tag": "span",
+                                                        "className": "cardTag",
+                                                        "content": "Auto"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "cardContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "cardTitle",
+                                                        "content": "Motorix"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "cardMeta",
+                                                        "content": "Лидов +52%"
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
-                                }
-                            },
-                            "PortfolioCardThree": {
-                                "CardImage": {
-                                    "CardImageImg": {
-                                        "props": {
-                                            "src": "",
-                                            "alt": "Лендинг автосалона"
-                                        }
-                                    },
-                                    "CardTag": {
-                                        "content": "Auto"
-                                    }
-                                },
-                                "CardContent": {
-                                    "CardTitle": {
-                                        "content": "Motorix"
-                                    },
-                                    "CardMeta": {
-                                        "content": "Лидов +52%"
-                                    }
-                                }
+                                ]
                             }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         },
         "Steps": {
             "styles": {
-                "StepsSection": {
-                    "__html": "section",
+                "stepsSection": {
                     "base": {
                         "padding": "6rem 2rem",
                         "background": "var(--background)",
@@ -1073,24 +1140,21 @@
                         "padding": "3rem 1rem"
                     }
                 },
-                "StepsContainer": {
-                    "__html": "div",
+                "stepsContainer": {
                     "base": {
                         "max-width": "1000px",
                         "margin": "0 auto"
                     },
                     "mobile": {}
                 },
-                "SectionHeader": {
-                    "__html": "div",
+                "sectionHeader": {
                     "base": {
                         "text-align": "center",
                         "margin-bottom": "4rem"
                     },
                     "mobile": {}
                 },
-                "SectionTitle": {
-                    "__html": "h2",
+                "sectionTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "clamp(2rem, 4vw, 2.75rem)",
@@ -1099,8 +1163,7 @@
                     },
                     "mobile": {}
                 },
-                "StepsList": {
-                    "__html": "div",
+                "stepsList": {
                     "base": {
                         "display": "flex",
                         "flex-direction": "column",
@@ -1108,8 +1171,7 @@
                     },
                     "mobile": {}
                 },
-                "StepItemOne": {
-                    "__html": "div",
+                "stepItem": {
                     "base": {
                         "display": "grid",
                         "grid-template-columns": "60px 1fr",
@@ -1121,47 +1183,7 @@
                         "gap": "1rem"
                     }
                 },
-                "StepItemTwo": {
-                    "__html": "div",
-                    "base": {
-                        "display": "grid",
-                        "grid-template-columns": "60px 1fr",
-                        "gap": "2rem",
-                        "padding": "1.5rem 0",
-                        "border-bottom": "1px solid var(--border-light)"
-                    },
-                    "mobile": {
-                        "gap": "1rem"
-                    }
-                },
-                "StepItemThree": {
-                    "__html": "div",
-                    "base": {
-                        "display": "grid",
-                        "grid-template-columns": "60px 1fr",
-                        "gap": "2rem",
-                        "padding": "1.5rem 0",
-                        "border-bottom": "1px solid var(--border-light)"
-                    },
-                    "mobile": {
-                        "gap": "1rem"
-                    }
-                },
-                "StepItemFour": {
-                    "__html": "div",
-                    "base": {
-                        "display": "grid",
-                        "grid-template-columns": "60px 1fr",
-                        "gap": "2rem",
-                        "padding": "1.5rem 0",
-                        "border-bottom": "1px solid var(--border-light)"
-                    },
-                    "mobile": {
-                        "gap": "1rem"
-                    }
-                },
-                "StepItemFive": {
-                    "__html": "div",
+                "stepItemLast": {
                     "base": {
                         "display": "grid",
                         "grid-template-columns": "60px 1fr",
@@ -1172,8 +1194,7 @@
                         "gap": "1rem"
                     }
                 },
-                "StepNumber": {
-                    "__html": "div",
+                "stepNumber": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "2.5rem",
@@ -1185,13 +1206,11 @@
                         "font-size": "2rem"
                     }
                 },
-                "StepContent": {
-                    "__html": "div",
+                "stepContent": {
                     "base": {},
                     "mobile": {}
                 },
-                "StepTitle": {
-                    "__html": "h3",
+                "stepTitle": {
                     "base": {
                         "font-size": "1.3rem",
                         "font-weight": "600",
@@ -1202,8 +1221,7 @@
                         "font-size": "1.1rem"
                     }
                 },
-                "StepDesc": {
-                    "__html": "p",
+                "stepDesc": {
                     "base": {
                         "color": "var(--text-muted)",
                         "line-height": "1.5"
@@ -1214,88 +1232,173 @@
                 }
             },
             "mainContent": {
-                "StepsSection": {
-                    "StepsContainer": {
-                        "SectionHeader": {
-                            "SectionTitle": {
-                                "content": "Как мы работаем"
+                "tag": "section",
+                "className": "stepsSection",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "stepsContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "sectionHeader",
+                                "childrens": [
+                                    {
+                                        "tag": "h2",
+                                        "className": "sectionTitle",
+                                        "content": "Как мы работаем"
+                                    }
+                                ]
+                            },
+                            {
+                                "tag": "div",
+                                "className": "stepsList",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "stepItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "stepNumber",
+                                                "content": "01"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "stepContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "stepTitle",
+                                                        "content": "Короткий брифинг (30 минут)"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "stepDesc",
+                                                        "content": "Созваниваемся, фиксируем цели, ЦА, оффер. Формируем ТЗ в реальном времени."
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "stepItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "stepNumber",
+                                                "content": "02"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "stepContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "stepTitle",
+                                                        "content": "5 макетов на выбор"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "stepDesc",
+                                                        "content": "Вы получаете 5 вариантов первого экрана. Выбираете лучший — его и верстаем."
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "stepItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "stepNumber",
+                                                "content": "03"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "stepContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "stepTitle",
+                                                        "content": "Реализация за 1 день"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "stepDesc",
+                                                        "content": "Верстаем, подключаем формы, настраиваем аналитику. Вы получаете ссылку на тестовый домен."
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "stepItem",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "stepNumber",
+                                                "content": "04"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "stepContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "stepTitle",
+                                                        "content": "Деплой на ваш хостинг"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "stepDesc",
+                                                        "content": "Помогаем с размещением на любом хостинге или передаём архив с исходниками."
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "stepItemLast",
+                                        "childrens": [
+                                            {
+                                                "tag": "div",
+                                                "className": "stepNumber",
+                                                "content": "05"
+                                            },
+                                            {
+                                                "tag": "div",
+                                                "className": "stepContent",
+                                                "childrens": [
+                                                    {
+                                                        "tag": "h3",
+                                                        "className": "stepTitle",
+                                                        "content": "Поддержка в течение года"
+                                                    },
+                                                    {
+                                                        "tag": "p",
+                                                        "className": "stepDesc",
+                                                        "content": "Бесплатные правки по вёрстке, консультации по улучшению конверсии."
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
-                        },
-                        "StepsList": {
-                            "StepItemOne": {
-                                "StepNumber": {
-                                    "content": "01"
-                                },
-                                "StepContent": {
-                                    "StepTitle": {
-                                        "content": "Короткий брифинг (30 минут)"
-                                    },
-                                    "StepDesc": {
-                                        "content": "Созваниваемся, фиксируем цели, ЦА, оффер. Формируем ТЗ в реальном времени."
-                                    }
-                                }
-                            },
-                            "StepItemTwo": {
-                                "StepNumber": {
-                                    "content": "02"
-                                },
-                                "StepContent": {
-                                    "StepTitle": {
-                                        "content": "5 макетов на выбор"
-                                    },
-                                    "StepDesc": {
-                                        "content": "Вы получаете 5 вариантов первого экрана. Выбираете лучший — его и верстаем."
-                                    }
-                                }
-                            },
-                            "StepItemThree": {
-                                "StepNumber": {
-                                    "content": "03"
-                                },
-                                "StepContent": {
-                                    "StepTitle": {
-                                        "content": "Реализация за 1 день"
-                                    },
-                                    "StepDesc": {
-                                        "content": "Верстаем, подключаем формы, настраиваем аналитику. Вы получаете ссылку на тестовый домен."
-                                    }
-                                }
-                            },
-                            "StepItemFour": {
-                                "StepNumber": {
-                                    "content": "04"
-                                },
-                                "StepContent": {
-                                    "StepTitle": {
-                                        "content": "Деплой на ваш хостинг"
-                                    },
-                                    "StepDesc": {
-                                        "content": "Помогаем с размещением на любом хостинге или передаём архив с исходниками."
-                                    }
-                                }
-                            },
-                            "StepItemFive": {
-                                "StepNumber": {
-                                    "content": "05"
-                                },
-                                "StepContent": {
-                                    "StepTitle": {
-                                        "content": "Поддержка в течение года"
-                                    },
-                                    "StepDesc": {
-                                        "content": "Бесплатные правки по вёрстке, консультации по улучшению конверсии."
-                                    }
-                                }
-                            }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         },
         "ContactForm": {
             "styles": {
-                "ContactSection": {
-                    "__html": "section",
+                "contactSection": {
                     "base": {
                         "padding": "6rem 2rem",
                         "background": "var(--background-alt)",
@@ -1305,16 +1408,14 @@
                         "padding": "3rem 1rem"
                     }
                 },
-                "ContactContainer": {
-                    "__html": "div",
+                "contactContainer": {
                     "base": {
                         "max-width": "600px",
                         "margin": "0 auto"
                     },
                     "mobile": {}
                 },
-                "ContactCard": {
-                    "__html": "div",
+                "contactCard": {
                     "base": {
                         "background": "var(--surface)",
                         "border-radius": "var(--border-radius-lg)",
@@ -1326,8 +1427,7 @@
                         "padding": "2rem 1.5rem"
                     }
                 },
-                "FormTitle": {
-                    "__html": "h2",
+                "formTitle": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "2rem",
@@ -1340,8 +1440,7 @@
                         "font-size": "1.6rem"
                     }
                 },
-                "FormSubtitle": {
-                    "__html": "p",
+                "formSubtitle": {
                     "base": {
                         "text-align": "center",
                         "color": "var(--text-muted)",
@@ -1349,22 +1448,19 @@
                     },
                     "mobile": {}
                 },
-                "FormGroupOne": {
-                    "__html": "div",
+                "formGroup": {
                     "base": {
                         "margin-bottom": "1.5rem"
                     },
                     "mobile": {}
                 },
-                "FormGroupTwo": {
-                    "__html": "div",
+                "formGroupLast": {
                     "base": {
                         "margin-bottom": "2rem"
                     },
                     "mobile": {}
                 },
-                "FormLabel": {
-                    "__html": "label",
+                "formLabel": {
                     "base": {
                         "display": "block",
                         "color": "var(--text-main)",
@@ -1373,8 +1469,7 @@
                     },
                     "mobile": {}
                 },
-                "FormInputOne": {
-                    "__html": "input",
+                "formInput": {
                     "base": {
                         "width": "100%",
                         "background": "var(--background-alt)",
@@ -1387,22 +1482,7 @@
                     },
                     "mobile": {}
                 },
-                "FormInputTwo": {
-                    "__html": "input",
-                    "base": {
-                        "width": "100%",
-                        "background": "var(--background-alt)",
-                        "border": "1px solid var(--border-light)",
-                        "border-radius": "var(--border-radius-sm)",
-                        "padding": "0.9rem 1rem",
-                        "color": "var(--text-main)",
-                        "font-family": "var(--font-main)",
-                        "outline": "none"
-                    },
-                    "mobile": {}
-                },
-                "FormSubmit": {
-                    "__html": "button",
+                "formSubmit": {
                     "base": {
                         "width": "100%",
                         "background": "var(--gradient-accent)",
@@ -1418,60 +1498,91 @@
                 }
             },
             "mainContent": {
-                "ContactSection": {
-                    "ContactContainer": {
-                        "ContactCard": {
-                            "FormTitle": {
-                                "content": "Готовы обсудить проект?"
-                            },
-                            "FormSubtitle": {
-                                "content": "Оставьте контакты — мы перезвоним сегодня"
-                            },
-                            "FormGroupOne": {
-                                "FormLabel": {
-                                    "props": {
-                                        "htmlFor": "contact-name"
+                "tag": "section",
+                "className": "contactSection",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "contactContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "contactCard",
+                                "childrens": [
+                                    {
+                                        "tag": "h2",
+                                        "className": "formTitle",
+                                        "content": "Готовы обсудить проект?"
                                     },
-                                    "content": "Имя"
-                                },
-                                "FormInputOne": {
-                                    "props": {
-                                        "type": "text",
-                                        "id": "contact-name",
-                                        "placeholder": "Алексей"
-                                    }
-                                }
-                            },
-                            "FormGroupTwo": {
-                                "FormLabel": {
-                                    "props": {
-                                        "htmlFor": "contact-phone"
+                                    {
+                                        "tag": "p",
+                                        "className": "formSubtitle",
+                                        "content": "Оставьте контакты — мы перезвоним сегодня"
                                     },
-                                    "content": "Телефон"
-                                },
-                                "FormInputTwo": {
-                                    "props": {
-                                        "type": "tel",
-                                        "id": "contact-phone",
-                                        "placeholder": "+7 (___) ___-__-__"
+                                    {
+                                        "tag": "div",
+                                        "className": "formGroup",
+                                        "childrens": [
+                                            {
+                                                "tag": "label",
+                                                "className": "formLabel",
+                                                "props": {
+                                                    "htmlFor": "contact-name"
+                                                },
+                                                "content": "Имя"
+                                            },
+                                            {
+                                                "tag": "input",
+                                                "className": "formInput",
+                                                "props": {
+                                                    "type": "text",
+                                                    "id": "contact-name",
+                                                    "placeholder": "Алексей"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "formGroupLast",
+                                        "childrens": [
+                                            {
+                                                "tag": "label",
+                                                "className": "formLabel",
+                                                "props": {
+                                                    "htmlFor": "contact-phone"
+                                                },
+                                                "content": "Телефон"
+                                            },
+                                            {
+                                                "tag": "input",
+                                                "className": "formInput",
+                                                "props": {
+                                                    "type": "tel",
+                                                    "id": "contact-phone",
+                                                    "placeholder": "+7 (___) ___-__-__"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "button",
+                                        "className": "formSubmit",
+                                        "props": {
+                                            "type": "submit"
+                                        },
+                                        "content": "Отправить заявку"
                                     }
-                                }
-                            },
-                            "FormSubmit": {
-                                "props": {
-                                    "type": "submit"
-                                },
-                                "content": "Отправить заявку"
+                                ]
                             }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         },
         "Footer": {
             "styles": {
-                "FooterWrapper": {
-                    "__html": "footer",
+                "footerWrapper": {
                     "base": {
                         "background": "var(--background-alt)",
                         "padding": "3rem 2rem 2rem",
@@ -1482,16 +1593,14 @@
                         "padding": "2rem 1rem 1.5rem"
                     }
                 },
-                "FooterContainer": {
-                    "__html": "div",
+                "footerContainer": {
                     "base": {
                         "max-width": "var(--container-width)",
                         "margin": "0 auto"
                     },
                     "mobile": {}
                 },
-                "FooterTop": {
-                    "__html": "div",
+                "footerTop": {
                     "base": {
                         "display": "flex",
                         "justify-content": "space-between",
@@ -1504,8 +1613,7 @@
                         "gap": "1.5rem"
                     }
                 },
-                "FooterLogo": {
-                    "__html": "div",
+                "footerLogo": {
                     "base": {
                         "display": "flex",
                         "align-items": "center",
@@ -1513,8 +1621,7 @@
                     },
                     "mobile": {}
                 },
-                "FooterLogoIcon": {
-                    "__html": "span",
+                "footerLogoIcon": {
                     "base": {
                         "font-size": "1.5rem",
                         "line-height": "1",
@@ -1522,8 +1629,7 @@
                     },
                     "mobile": {}
                 },
-                "FooterLogoText": {
-                    "__html": "span",
+                "footerLogoText": {
                     "base": {
                         "font-family": "var(--font-display)",
                         "font-size": "1.5rem",
@@ -1532,8 +1638,7 @@
                     },
                     "mobile": {}
                 },
-                "FooterNav": {
-                    "__html": "div",
+                "footerNav": {
                     "base": {
                         "display": "flex",
                         "gap": "2.5rem"
@@ -1542,41 +1647,18 @@
                         "gap": "2rem"
                     }
                 },
-                "FooterLinkOne": {
-                    "__html": "span",
+                "footerLink": {
                     "base": {
                         "color": "var(--text-muted)",
                         "cursor": "pointer",
                         "font-size": "0.95rem",
                         "font-weight": "500",
-                        "transition": "color var(--transition-fast)"
+                        "transition": "color var(--transition-fast)",
+                        "text-decoration": "none"
                     },
                     "mobile": {}
                 },
-                "FooterLinkTwo": {
-                    "__html": "span",
-                    "base": {
-                        "color": "var(--text-muted)",
-                        "cursor": "pointer",
-                        "font-size": "0.95rem",
-                        "font-weight": "500",
-                        "transition": "color var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "FooterLinkThree": {
-                    "__html": "span",
-                    "base": {
-                        "color": "var(--text-muted)",
-                        "cursor": "pointer",
-                        "font-size": "0.95rem",
-                        "font-weight": "500",
-                        "transition": "color var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "FooterBottom": {
-                    "__html": "div",
+                "footerBottom": {
                     "base": {
                         "display": "flex",
                         "justify-content": "space-between",
@@ -1589,8 +1671,7 @@
                         "text-align": "center"
                     }
                 },
-                "FooterCopy": {
-                    "__html": "p",
+                "footerCopy": {
                     "base": {
                         "color": "var(--text-light)",
                         "font-size": "0.9rem",
@@ -1598,76 +1679,106 @@
                     },
                     "mobile": {}
                 },
-                "FooterSocial": {
-                    "__html": "div",
+                "footerSocial": {
                     "base": {
                         "display": "flex",
                         "gap": "2rem"
                     },
                     "mobile": {}
                 },
-                "SocialLinkOne": {
-                    "__html": "span",
+                "socialLink": {
                     "base": {
                         "color": "var(--text-muted)",
                         "cursor": "pointer",
                         "font-size": "0.9rem",
                         "font-weight": "500",
-                        "transition": "color var(--transition-fast)"
-                    },
-                    "mobile": {}
-                },
-                "SocialLinkTwo": {
-                    "__html": "span",
-                    "base": {
-                        "color": "var(--text-muted)",
-                        "cursor": "pointer",
-                        "font-size": "0.9rem",
-                        "font-weight": "500",
-                        "transition": "color var(--transition-fast)"
+                        "transition": "color var(--transition-fast)",
+                        "text-decoration": "none"
                     },
                     "mobile": {}
                 }
             },
             "mainContent": {
-                "FooterWrapper": {
-                    "FooterContainer": {
-                        "FooterTop": {
-                            "FooterLogo": {
-                                "FooterLogoIcon": {
-                                    "content": "⚡"
-                                },
-                                "FooterLogoText": {
-                                    "content": "LandX"
-                                }
+                "tag": "footer",
+                "className": "footerWrapper",
+                "childrens": [
+                    {
+                        "tag": "div",
+                        "className": "footerContainer",
+                        "childrens": [
+                            {
+                                "tag": "div",
+                                "className": "footerTop",
+                                "childrens": [
+                                    {
+                                        "tag": "div",
+                                        "className": "footerLogo",
+                                        "childrens": [
+                                            {
+                                                "tag": "span",
+                                                "className": "footerLogoIcon",
+                                                "content": "⚡"
+                                            },
+                                            {
+                                                "tag": "span",
+                                                "className": "footerLogoText",
+                                                "content": "LandX"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "footerNav",
+                                        "childrens": [
+                                            {
+                                                "tag": "a",
+                                                "className": "footerLink",
+                                                "content": "Услуги"
+                                            },
+                                            {
+                                                "tag": "a",
+                                                "className": "footerLink",
+                                                "content": "Кейсы"
+                                            },
+                                            {
+                                                "tag": "a",
+                                                "className": "footerLink",
+                                                "content": "Контакты"
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
-                            "FooterNav": {
-                                "FooterLinkOne": {
-                                    "content": "Услуги"
-                                },
-                                "FooterLinkTwo": {
-                                    "content": "Кейсы"
-                                },
-                                "FooterLinkThree": {
-                                    "content": "Контакты"
-                                }
+                            {
+                                "tag": "div",
+                                "className": "footerBottom",
+                                "childrens": [
+                                    {
+                                        "tag": "p",
+                                        "className": "footerCopy",
+                                        "content": "© 2026 LandX. Продаём лидов, а не пиксели."
+                                    },
+                                    {
+                                        "tag": "div",
+                                        "className": "footerSocial",
+                                        "childrens": [
+                                            {
+                                                "tag": "a",
+                                                "className": "socialLink",
+                                                "content": "Telegram"
+                                            },
+                                            {
+                                                "tag": "a",
+                                                "className": "socialLink",
+                                                "content": "Email"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
-                        },
-                        "FooterBottom": {
-                            "FooterCopy": {
-                                "content": "© 2026 LandX. Продаём лидов, а не пиксели."
-                            },
-                            "FooterSocial": {
-                                "SocialLinkOne": {
-                                    "content": "Telegram"
-                                },
-                                "SocialLinkTwo": {
-                                    "content": "Email"
-                                }
-                            }
-                        }
+                        ]
                     }
-                }
+                ]
             }
         }
     }

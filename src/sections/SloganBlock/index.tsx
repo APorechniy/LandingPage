@@ -1,12 +1,12 @@
 import { LightningText } from "@/components/LightningText";
-import { SloganContainer, SloganSection } from "./styled";
+import styles from "./index.module.css";
 
 export const SloganBlock = () => {
     return (
-        <SloganSection id="slogan">
-            <SloganContainer >
-                <LightningText >Генерируем лидов, а не пиксели</LightningText>
-            </SloganContainer>
-        </SloganSection>
+        <section className={styles.sloganSection} >
+            <div className={styles.sloganContainer} >
+                <LightningText>Генерируем лидов, а не пиксели</LightningText>
+            </div>
+        </section>
     );
 };

@@ -1,89 +1,91 @@
 "use client"
 
-import { Loader } from "@/components/Loader";
-import { BadgesRow, FormGroup, FormInput, FormLabel, FormSelect, FormSubmit, FormSubtitle, FormTitle, HeroBadge, HeroContainer, HeroContent, HeroDescription, HeroForm, HeroGrid, HeroList, HeroListItem, HeroSection, HeroTitle, Notify } from "./styled";
 import { useForm } from "@/hooks/useForm";
+import styles from "./index.module.css";
+import { Loader } from "@/components/Loader";
 
 export const Hero = () => {
     const {
         name, phone, email, service, sendingStatus, handleChange, handleSubmit
     } = useForm()
-
     return (
-        <HeroSection id="hero">
-            <HeroContainer >
-                <HeroGrid >
-                    <HeroContent >
-                        <BadgesRow>
-                            <HeroBadge $colorToken={"accent"}>🚀 Старт за 24 часа</HeroBadge>
-                            <HeroBadge $colorToken={"accent-secondary"}>♾️ Полный Flow</HeroBadge>
-                            <HeroBadge $colorToken={"accent-thirdy"}>🛡️ Поддержка 1 год</HeroBadge>
-                        </BadgesRow>
-                        <HeroTitle >Генерируем лендинг</HeroTitle>
-                        <HeroDescription >Не просто сайт — а готовый инструмент для генерации лидов.<br />Берём на себя всё: от дизайна до интеграции с вашей CRM.</HeroDescription>
-                        <HeroList >
-                            <HeroListItem >✓ Полное сопровождение «под ключ»</HeroListItem>
-                            <HeroListItem >✓ Интеграция с любой CRM-системой</HeroListItem>
-                            <HeroListItem >✓ Вы получаете лидов, а не картинку</HeroListItem>
-                        </HeroList>
-                    </HeroContent>
-                    <HeroForm onSubmit={handleSubmit}>
+        <section className={styles.heroSection} >
+            <div className={styles.heroContainer} >
+                <div className={styles.heroGrid} >
+                    <div className={styles.heroContent} >
+                        <div className={styles.heroBadgesRow}>
+                            <span className={styles.heroBadge} style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>🚀 Старт за 24 часа</span>
+                            <span className={styles.heroBadge} style={{ background: "var(--accent-secondary-soft)", color: "var(--accent-secondary)" }}>♾️ Полный Flow</span>
+                            <span className={styles.heroBadge} style={{ background: "var(--accent-thirdy-soft)", color: "var(--accent-thirdy)" }}>🛡️ Поддержка 1 год</span>
+                        </div>
+                        <h1 className={styles.heroTitle} >
+                            <span  >
+                                Генерируем лендинг
+                            </span>
+                        </h1>
+                        <p className={styles.heroDescription} >
+                            Не просто сайт — а готовый инструмент для генерации лидов. <br /> Берём на себя всё: от дизайна до интеграции с вашей CRM.
+                        </p>
+                        <ul className={styles.heroList} >
+                            <li className={styles.heroListItem} >
+                                ✓ Полное сопровождение «под ключ»
+                            </li>
+                            <li className={styles.heroListItem} >
+                                ✓ Интеграция с любой CRM-системой
+                            </li>
+                            <li className={styles.heroListItem} >
+                                ✓ Вы получаете лидов, а не картинку
+                            </li>
+                        </ul>
+                    </div>
+                    <form className={styles.heroForm} onSubmit={handleSubmit}>
                         {
                             sendingStatus === "SUCCESS"
                                 ?
-                                <Notify>
-                                    <FormTitle>Мы приняли Вашу заявку</FormTitle>
-                                    <FormSubtitle >Свяжемся в ближайшее время</FormSubtitle>
-                                </Notify>
+                                <div className={styles.notify}>
+                                    <h3 className={styles.formTitle} >Мы приняли Вашу заявку</h3>
+                                    <p className={styles.formSubtitle}  >Свяжемся в ближайшее время</p>
+                                </div>
                                 :
                                 <>
-                                    <FormTitle >Обсудить проект</FormTitle>
-                                    <FormSubtitle >Ответим в течение 15 минут</FormSubtitle>
-                                    <FormGroup >
-                                        <FormLabel htmlFor='hero-name' >Имя *</FormLabel>
-                                        <FormInput
-                                            onChange={(e) => handleChange(e.target.value, "name")}
-                                            value={name}
-                                            type='text'
-                                            id='hero-name'
-                                            required
-                                        />
-                                    </FormGroup>
-                                    <FormGroup >
-                                        <FormLabel htmlFor='hero-email'>E-Mail *</FormLabel>
-                                        <FormInput
-                                            onChange={(e) => handleChange(e.target.value, "email")}
-                                            value={email}
-                                            type='email'
-                                            id='hero-email'
-                                            placeholder=''
-                                            required
-                                        />
-                                    </FormGroup>
-                                    <FormGroup >
-                                        <FormLabel htmlFor='hero-phone'>Телефон</FormLabel>
-                                        <FormInput
-                                            onChange={(e) => handleChange(e.target.value, "phone")}
-                                            value={phone}
-                                            type='tel'
-                                            id='hero-phone'
-                                            placeholder='+7 (___) ___-__-__'
-                                        />
-                                    </FormGroup>
-                                    <FormGroup >
-                                        <FormLabel htmlFor='hero-service'>Интересует *</FormLabel>
-                                        <FormSelect
-                                            onChange={(e) => handleChange(e.target.value, "service")}
-                                            id='hero-service'
-                                            value={service}
-                                            required
-                                        >
+                                    <h3 className={styles.formTitle} >
+                                        Обсудить проект
+                                    </h3>
+                                    <p className={styles.formSubtitle} >
+                                        Ответим в течение 15 минут
+                                    </p>
+                                    <div className={styles.formGroup} >
+                                        <label className={styles.formLabel} htmlFor='hero-name' >
+                                            Имя *
+                                        </label>
+                                        <input value={name} onChange={(e) => handleChange(e.target.value, "name")} className={styles.formInput} type='text' id='hero-name' required >
+                                        </input>
+                                    </div>
+                                    <div className={styles.formGroup} >
+                                        <label className={styles.formLabel} htmlFor='hero-email' >
+                                            E-Mail *
+                                        </label>
+                                        <input value={email} onChange={(e) => handleChange(e.target.value, "email")} className={styles.formInput} type='email' id='hero-email' required >
+                                        </input>
+                                    </div>
+                                    <div className={styles.formGroup} >
+                                        <label className={styles.formLabel} htmlFor='hero-phone' >
+                                            Телефон
+                                        </label>
+                                        <input value={phone} onChange={(e) => handleChange(e.target.value, "phone")} className={styles.formInput} type='tel' id='hero-phone' placeholder='+7 (___) ___-__-__' >
+                                        </input>
+                                    </div>
+                                    <div className={styles.formGroupLast} >
+                                        <label className={styles.formLabel} htmlFor='hero-service' >
+                                            Интересует *
+                                        </label>
+                                        <select value={service} onChange={(e) => handleChange(e.target.value, "service")} className={styles.formSelect} id='hero-service' required>
                                             <option value={"landing"}>Лендинг под ключ</option>
                                             <option value={"app"}>Web-приложение</option>
                                             <option value={"intagration"}>Интеграция готового решения</option>
-                                        </FormSelect>
-                                    </FormGroup>
-                                    <FormSubmit role="submit" disabled={sendingStatus === "LOADING"}>
+                                        </select>
+                                    </div>
+                                    <button className={styles.formSubmit} type='submit' disabled={sendingStatus === "LOADING"}>
                                         {
                                             sendingStatus === "LOADING"
                                                 ?
@@ -91,12 +93,12 @@ export const Hero = () => {
                                                 :
                                                 "Отправить заявку"
                                         }
-                                    </FormSubmit>
+                                    </button>
                                 </>
                         }
-                    </HeroForm>
-                </HeroGrid>
-            </HeroContainer>
-        </HeroSection>
+                    </form>
+                </div>
+            </div>
+        </section>
     );
 };

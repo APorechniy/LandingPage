@@ -1,0 +1,19 @@
+.sloganSection {
+  padding: 4rem 2rem;
+  background: var(--primary);
+  font-family: var(--font-main);
+  text-align: center;
+  background: var(--slogan-background);
+}
+
+.sloganContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+@media(max-width: 768px) {
+  .sloganSection {
+    padding: 3rem 1rem;
+  }
+}
