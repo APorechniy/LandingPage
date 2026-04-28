@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { Header } from '@/sections/Header';
 import { Hero } from '@/sections/Hero';
 import { SloganBlock } from '@/sections/SloganBlock';
@@ -10,16 +9,16 @@ import { Footer } from '@/sections/Footer';
 import './global.css'
 
 export default function Page() {
-    return (
-      <main>
-        <Header />
-        <Hero />
-        <SloganBlock />
-        <Services />
-        <Portfolio />
-        <Steps />
-        <ContactForm />
-        <Footer />
-      </main>
-    );
+  return (
+    <>
+      <Header />
+      <Hero />
+      <SloganBlock />
+      <Services />
+      <Portfolio />
+      <Steps />
+      <ContactForm />
+      <Footer />
+    </>
+  );
 };
