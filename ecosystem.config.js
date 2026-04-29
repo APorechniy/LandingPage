@@ -3,7 +3,7 @@ module.exports = {
         name: 'nextjs-app',
         script: 'npm',
         args: 'start',
-        cwd: '/var/www/html/LandingPage',
+        cwd: '/var/www/html',
 
         env: {
             NODE_ENV: 'production',
