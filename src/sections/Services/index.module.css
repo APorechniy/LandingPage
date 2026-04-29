@@ -1,0 +1,77 @@
+.servicesSection {
+  padding: 6rem 2rem;
+  background: var(--background);
+  font-family: var(--font-main);
+}
+
+.servicesContainer {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--text-main);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.serviceCard {
+  background: var(--surface-elevated);
+  border-radius: var(--border-radius-md);
+  padding: 2rem;
+  border: 1px solid var(--border-light);
+  transition: transform var(--transition-fast);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cardIcon {
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media(max-width: 768px) {
+  .servicesSection {
+    padding: 3rem 1rem;
+  }
+
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
