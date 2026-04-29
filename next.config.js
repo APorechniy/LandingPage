@@ -6,11 +6,6 @@ const nextConfig = {
     },
     compiler: {
         removeConsole: process.env.NODE_ENV === 'production',
-        styledComponents: {
-            ssr: true,
-            displayName: false,
-            fileName: false,
-        }
     },
     outputFileTracingIncludes: {
         '*': [
@@ -23,7 +18,6 @@ const nextConfig = {
     poweredByHeader: false,
     reactStrictMode: true,
     compress: true,
-    reactStrictMode: true,
 }
 
 module.exports = nextConfig

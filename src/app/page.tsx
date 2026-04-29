@@ -6,19 +6,18 @@ import { Portfolio } from '@/sections/Portfolio';
 import { Steps } from '@/sections/Steps';
 import { ContactForm } from '@/sections/ContactForm';
 import { Footer } from '@/sections/Footer';
-import './global.css'
 
 export default function Page() {
-    return (
-      <main>
-        <Header />
-        <Hero />
-        <SloganBlock />
-        <Services />
-        <Portfolio />
-        <Steps />
-        <ContactForm />
-        <Footer />
-      </main>
-    );
+  return (
+    <main>
+      <Header />
+      <Hero />
+      <SloganBlock />
+      <Services />
+      <Portfolio />
+      <Steps />
+      <ContactForm />
+      <Footer />
+    </main>
+  );
 };
